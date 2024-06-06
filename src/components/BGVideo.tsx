@@ -1,6 +1,12 @@
 import { useState } from "react";
 import hero from "../assets/hero-vid.webm";
-export default function BGVideo() {
+import { cn } from "../utils/cn";
+export default function BGVideo({
+  className,
+  ...props
+}: {
+  className?: string;
+}) {
   const [muted, setMuted] = useState(true);
   return (
     <div className="relative">
@@ -46,7 +52,11 @@ export default function BGVideo() {
         muted={muted}
         loop
         id="myVideo"
-        className="top-0 left-0 w-full h-screen z-0 object-cover"
+        className={cn(
+          "top-0 left-0 w-full h-screen z-0 object-cover",
+          className
+        )}
+        {...props}
       >
         <source src={hero} type="video/webm" />
         Your browser does not support HTML5 video.
