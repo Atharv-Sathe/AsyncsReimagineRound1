@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import "./App.css";
-import BGVideo from "./components/BGVideo";
+// import BGVideo from "./components/BGVideo";
 // import StarBackground from "./components/preloaderTest2";
 import Preloader from "./components/preloader";
 
