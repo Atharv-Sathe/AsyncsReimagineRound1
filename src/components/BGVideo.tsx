@@ -61,6 +61,9 @@ export default function BGVideo({
         <source src={hero} type="video/webm" />
         Your browser does not support HTML5 video.
       </video>
+      <div id="black-overlay" className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-50  brightness-50">
+        {/* This div puts a black-overlay over the video. */}
+      </div>
     </div>
   );
 }
