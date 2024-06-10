@@ -113,7 +113,7 @@ function DropdownMenu({title}: DropdownMenuProps) {
       <ul className="w-max text-base text-left">
           {dropDownList[title].map((item, index) => <li 
           key={index}
-          className="hover:bg-gray-200 hover:cursor-pointer hover:text-black pt-2 px-2  rounded-md
+          className="hover:bg-gray-200 hover:cursor-pointer hover:text-black p-1 rounded-md
            transition-colors duration-300 ease-in-out
           "
           >
