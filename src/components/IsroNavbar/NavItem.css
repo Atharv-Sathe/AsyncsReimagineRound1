@@ -1,0 +1,23 @@
+.arrow-up {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    margin-top: 0;
+}
+
+.show-underline::after {
+    content: "";
+    position: absolute;
+    margin-top: 8px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2.5px;
+    background-color:#00d4ff; /* Change this to the color you want for the underline */
+    transition: width 0.3s ease-in-out;
+}
+
+.show-underline:hover::after {
+    width: 100%;
+}
