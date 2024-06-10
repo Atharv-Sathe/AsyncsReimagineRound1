@@ -25,3 +25,4 @@ dist-ssr
 
 README_DEF.md
 pnpm-lock.yaml
+package-lock.json
