@@ -7,6 +7,14 @@
     font-family: "Speedy";
     font-style: normal;
     font-weight: 100 900;
-    src: url("/src/assets/SpeedyRegular-7BLoE.ttf") format("truetype");
+    src: url("/src/assets/fonts/SpeedyRegular-7BLoE.ttf") format("truetype");
   }
+
+ @font-face {
+  font-family: "Ubuntu-med";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+ }
+
 }

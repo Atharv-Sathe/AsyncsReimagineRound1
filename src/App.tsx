@@ -6,6 +6,7 @@ import Navbar from "./components/IsroNavbar/Navbar";
 import Preloader from "./components/preloader";
 import HeroSection from "./components/HeroSection";
 import LatestNews from "./components/NewsCards/LatestNews";
+import HighlightsSection from "./components/Highlights/HighlightsSection";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
           </div>
           <Navbar />
           <HeroSection />
+          <HighlightsSection />
           <LatestNews />
         </>
       )}
