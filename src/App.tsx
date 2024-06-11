@@ -22,7 +22,7 @@ function App() {
         <>
           <div
             id="bg-video-wrapper"
-            className=" -z-10 w-screen h-screen fixed object-cover">
+            className=" -z-10 w-screen h-screen object-cover">
             <BGVideo />
           </div>
           <Navbar />
