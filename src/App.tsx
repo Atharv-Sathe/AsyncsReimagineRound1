@@ -5,6 +5,7 @@ import BGVideo from "./components/BGVideo";
 import Navbar from "./components/IsroNavbar/Navbar";
 import Preloader from "./components/preloader";
 import HeroSection from "./components/HeroSection";
+import LatestNews from "./components/NewsCards/LatestNews";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,11 +23,13 @@ function App() {
         <>
           <div
             id="bg-video-wrapper"
-            className=" -z-10 w-screen h-screen object-cover">
+            className=" -z-10 h-screen object-cover"
+          >
             <BGVideo />
           </div>
           <Navbar />
           <HeroSection />
+          <LatestNews />
         </>
       )}
     </>

@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Speedy";
+    font-style: normal;
+    font-weight: 100 900;
+    src: url("/src/assets/SpeedyRegular-7BLoE.ttf") format("truetype");
+  }
+}

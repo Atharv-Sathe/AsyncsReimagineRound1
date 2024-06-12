@@ -3,6 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    fontFamily:{
+      'sans': ['Roboto', 'sans-serif'],
+      'serif': ['Merriweather', 'serif'],
+      'mono': ['Inconsolata', 'monospace'],
+      'space': ['Speedy', 'monospace'],
+    }
   },
   plugins: [],
 };
