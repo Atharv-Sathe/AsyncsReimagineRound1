@@ -5,7 +5,7 @@ import NavItems from './NavItems';
 
 function Navbar() {
     return (
-        <nav className=' m-auto w-fit gap-16  flex  items-center'>
+        <nav className=' z-10  m-auto w-full gap-16  flex justify-center items-center top-0 fixed'>
             <Logo />
             <NavItems />
         </nav>
