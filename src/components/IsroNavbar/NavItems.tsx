@@ -30,7 +30,7 @@ function NavItems() {
 
   return (
     <div className='glassmorph flex-col justify-center py-3 px-4 h-fit'>
-        <ul className=' text-white text-xl  flex items-center gap-8 h-fit font-space-mono'>
+        <ul className=' text-white text-xl  flex items-center gap-8 h-fit font-ubuntu'>
             <li className='home hover:cursor-pointer' key="Home" ref={homeRef}>Home</li>
             {titles.map(title => <li className='flex items-center'  key={title} ><NavItem  title={title} />
             </li>)}

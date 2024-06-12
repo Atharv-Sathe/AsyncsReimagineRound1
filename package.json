@@ -12,8 +12,12 @@
   "dependencies": {
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",
+    "@tsparticles/engine": "^3.4.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.4.0",
     "@types/three": "^0.165.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
     "framer-motion-3d": "^11.2.10",
     "gsap": "^3.12.5",
     "maath": "^0.10.7",
