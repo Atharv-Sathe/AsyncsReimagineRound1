@@ -19,7 +19,7 @@ function HighlightsSection() {
                 particleColor="#FFFFFF"
                 />
             </div>
-            <div id="carousel-heading" className=" relative z-10  left-20 top-20">
+            <div id="carousel-heading" className="w-fit relative z-10  left-20 top-20">
                 <h1 className="font-space text-5xl text-white">Highlights</h1>
             </div>
             <div id="carousel-content" className="relative z-10 left-1/4 top-32 h-[65%] w-[50%] max-h-96 text-white">
