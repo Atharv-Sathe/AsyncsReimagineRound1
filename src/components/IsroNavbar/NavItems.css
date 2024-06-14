@@ -1,9 +1,3 @@
-ul {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-
 img {
     filter: invert(1) brightness(2);
 }
@@ -17,7 +11,7 @@ img {
 
 .home:hover::after {
     content: "";
-    background: url('../../assets/saturn-v-space.gif');
+    background: url('../../assets/images/saturn-v-space.gif');
     position: absolute;
     background-size: contain;
     top: calc(var(--y) - 30px);

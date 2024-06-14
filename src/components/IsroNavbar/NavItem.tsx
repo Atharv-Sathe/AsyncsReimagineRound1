@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import DropdownMenu from './DropdownMenu';
-import dropIcon from '../../assets/down-chevron.png';
+import dropIcon from '../../assets/images/down-chevron.png';
 import './NavItem.css';
 
 interface NavItemProps {

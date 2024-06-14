@@ -8,6 +8,8 @@ export default {
       'serif': ['Merriweather', 'serif'],
       'mono': ['Inconsolata', 'monospace'],
       'space': ['Speedy', 'monospace'],
+      'ubuntu': ['Ubuntu-med', 'sans-serif'],
+      'space-mono': ['Space-Mono-Reg', 'monospace'],
     }
   },
   plugins: [],

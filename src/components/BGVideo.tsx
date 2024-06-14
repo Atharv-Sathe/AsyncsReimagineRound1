@@ -1,5 +1,5 @@
 import { useState } from "react";
-import hero from "../assets/hero-vid.webm";
+import hero from "../assets/videos/hero-vid.webm";
 import { cn } from "../utils/cn";
 export default function BGVideo({
   className,
