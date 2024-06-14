@@ -7,6 +7,7 @@ import Preloader from "./components/preloader";
 import HeroSection from "./components/HeroSection";
 import LatestNews from "./components/NewsCards/LatestNews";
 import HighlightsSection from "./components/Highlights/HighlightsSection";
+import Footer from "./components/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,16 +23,14 @@ function App() {
         <Preloader />
       ) : (
         <>
-          <div
-            id="bg-video-wrapper"
-            className=" -z-10 h-screen object-cover"
-          >
+          <div id="bg-video-wrapper" className=" -z-10 h-screen object-cover">
             <BGVideo />
           </div>
           <Navbar />
           <HeroSection />
           <HighlightsSection />
           <LatestNews />
+          <Footer />
         </>
       )}
     </>
