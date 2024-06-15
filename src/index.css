@@ -27,6 +27,11 @@
   }
 }
 
+:root {
+  --isro-blue: #0E88D3;
+  --isro-orange: #F47216;
+}
+
 body {
   background-color: black;
 }
