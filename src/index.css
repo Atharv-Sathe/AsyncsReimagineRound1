@@ -11,22 +11,34 @@
     src: url("/src/assets/fonts/SpeedyRegular-7BLoE.ttf") format("truetype");
   }
 
- @font-face {
-  font-family: "Ubuntu-med";
-  font-weight: 500;
-  font-style: normal;
-  src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
- }
+  @font-face {
+    font-family: "Ubuntu-med";
+    font-weight: 500;
+    font-style: normal;
+    src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+  }
 
- /*Use for Content  */
- @font-face { 
-  font-family: "Space-Mono-Reg";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/src/assets/fonts/SpaceMono-Regular.ttf") format("truetype");
- }
+  /*Use for Content  */
+  @font-face {
+    font-family: "Space-Mono-Reg";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/src/assets/fonts/SpaceMono-Regular.ttf") format("truetype");
+  }
 }
 
 body {
   background-color: black;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
