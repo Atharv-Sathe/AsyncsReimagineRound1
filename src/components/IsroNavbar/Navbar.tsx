@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Logo from './Logo';
 import NavItems from './NavItems';
 import {motion, useScroll, useMotionValueEvent} from "framer-motion"
