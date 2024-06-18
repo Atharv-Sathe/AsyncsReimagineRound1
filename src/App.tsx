@@ -8,6 +8,7 @@ import HeroSection from "./components/HeroSection";
 import LatestNews from "./components/NewsCards/LatestNews";
 import HighlightsSection from "./components/Highlights/HighlightsSection";
 import Footer from "./components/Footer";
+import Model from "./components/modelsSection/model";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ function App() {
           <HeroSection />
           <HighlightsSection />
           <LatestNews />
+          <Model />
           <Footer />
         </>
       )}
