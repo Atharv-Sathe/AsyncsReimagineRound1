@@ -67,8 +67,8 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             </div>
           </div>
         ))}
-        <div className="carousel-arrow-left" onClick={slideLeft}>&lsaquo;</div>
-        <div className="carousel-arrow-right" onClick={slideRight}>&rsaquo;</div>
+        <div className="carousel-arrow-left hover:bg-isro-orange" onClick={slideLeft}>&lsaquo;</div>
+        <div className="carousel-arrow-right hover:bg-isro-blue" onClick={slideRight}>&rsaquo;</div>
         <div className="carousel-pagination absolute left-1/2  flex gap-2">
           {images.map(( _ , ind) => (
             <div key={ind} className={`${ind === current ? "pagination-dot pagination-dot-active" : "pagination-dot"}`}
