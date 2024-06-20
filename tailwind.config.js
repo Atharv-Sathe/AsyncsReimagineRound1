@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'isro-blue': '#0E88D3',
+        'isro-orange': '#F47216',
+      },
+    },
     fontFamily:{
       'sans': ['Roboto', 'sans-serif'],
       'serif': ['Merriweather', 'serif'],
