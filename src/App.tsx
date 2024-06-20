@@ -8,6 +8,7 @@ import HeroSection from "./components/HeroSection";
 import LatestNews from "./components/NewsCards/LatestNews";
 import HighlightsSection from "./components/Highlights/HighlightsSection";
 import Footer from "./components/Footer";
+import SparklesBackground from "./components/SparklesBackground";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,8 +29,10 @@ function App() {
           </div>
           <Navbar />
           <HeroSection />
-          <HighlightsSection />
-          <LatestNews />
+          <SparklesBackground>
+            <HighlightsSection />
+            <LatestNews />
+          </SparklesBackground>
           <Footer />
         </>
       )}
