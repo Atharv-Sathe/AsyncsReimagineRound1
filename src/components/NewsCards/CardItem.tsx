@@ -1,26 +1,41 @@
+import { cn } from "../../utils/cn";
 import { CardItemType } from "../../utils/definitions";
 
 export default function CardItem({
-  title,
-  imageUrl,
-  hrefUrl,
-  dateString,
-}: CardItemType) {
+  cardItem,
+  className,
+}: {
+  cardItem: CardItemType;
+  className?: string;
+}) {
   return (
-    <div className="flex flex-col gap-1 w-80 m-4 rounded-sm p-1 shadow-sm relative flex-grow-0 flex-shrink-0 basis-auto items-start bg-white">
+    <li
+      className={cn(
+        "flex flex-col gap-1 w-80 rounded-sm p-1 shadow-sm relative flex-grow-0 flex-shrink-0 basis-auto items-start bg-white",
+        className
+      )}
+    >
       <img
-        src={imageUrl.length > 0 ? imageUrl : "https://via.placeholder.com/150"}
-        alt={title}
+        src={
+          cardItem.imageUrl.length > 0
+            ? cardItem.imageUrl
+            : "https://via.placeholder.com/150"
+        }
+        alt={cardItem.title}
         className="h-40 w-80 object-cover filter-none"
         loading="lazy"
       />
 
-      <p className="text-sm">{dateString}</p>
+      <p className="text-sm">{cardItem.dateString}</p>
 
-      <h3 className="text-xl font-[Ubuntu]">{title}</h3>
-      <a href={hrefUrl} target="_blank" className=" text-indigo-950 underline">
+      <h3 className="text-xl font-[Ubuntu]">{cardItem.title}</h3>
+      <a
+        href={cardItem.hrefUrl}
+        target="_blank"
+        className=" text-indigo-950 underline"
+      >
         Read More
       </a>
-    </div>
+    </li>
   );
 }
