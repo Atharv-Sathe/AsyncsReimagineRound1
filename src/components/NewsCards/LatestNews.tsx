@@ -57,7 +57,7 @@ export default function LatestNews() {
           scrollerRef.current.style.animation = originalAnimation;
 
           // Resume the animation
-          scrollerRef.current.style.animationPlayState = 'running';
+          // scrollerRef.current.style.animationPlayState = 'running';
         }
       }, 100); // A delay of 100 milliseconds for visual effect
     }
