@@ -10,6 +10,8 @@ import HighlightsSection from "./components/Highlights/HighlightsSection";
 import Footer from "./components/Footer";
 import Model from "./components/modelsSection/model";
 import SparklesBackground from "./components/SparklesBackground";
+import RecUpd from "./components/RecentUpdates/RecUpd";
+
 
 
 function App() {
@@ -32,7 +34,10 @@ function App() {
           <Navbar />
           <HeroSection />
           <SparklesBackground>
-            <HighlightsSection />
+            <div className="flex flex-row">
+              <HighlightsSection />
+              <RecUpd />
+            </div>
             <LatestNews />
             <Model />
           </SparklesBackground>

@@ -1,0 +1,39 @@
+.updates-info {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 35%, transparent);
+    
+}
+
+.info-inactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.info-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.title{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.1s ease-in,
+}
+
+.descrip {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.link {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.updates-info:hover .title,
+.updates-info:hover .descrip,
+.updates-info:hover .link {
+    transform: translateY(0);
+    opacity: 1;
+}
