@@ -137,6 +137,7 @@ export const ImagesSlider = ({
         perspective: "1000px",
       }}
     >
+      {loading && <div className="loading-indicator">Loading...</div>} {/* Display loading indicator */}
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
         <div
