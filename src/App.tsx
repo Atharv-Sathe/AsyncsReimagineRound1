@@ -34,7 +34,7 @@ function App() {
           <Navbar />
           <HeroSection />
           <SparklesBackground>
-            <div className="flex flex-row">
+            <div className="flex flex-row h-[50vh]">
               <HighlightsSection />
               <RecUpd />
             </div>
