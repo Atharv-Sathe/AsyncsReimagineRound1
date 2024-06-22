@@ -53,15 +53,15 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const hadleMouseLeave = () => setAutoPlay(true);
 
   return (
-    <div className="carousel flex h-full w-full"
+    <div className="carousel flex h-full w-full rounded-lg"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={hadleMouseLeave}
     >
-      <div className="carousel-wrapper relative w-full h-full">
+      <div className="carousel-wrapper relative w-full h-full rounded-lg">
         {images.map((img, ind) => (
-          <div key={ind} className={`${ind === current ? "carousel-card carousel-card-active" : "carousel-card"}  `}>
-            <img className="card-image w-full h-full  filter-none object-fill"  src={img.url} alt="carousel" />
-            <div className="card-overlay h-full w-full absolute bg-black bg-opacity-50 flex flex-col justify-center items-center"> 
+          <div key={ind} className={`${ind === current ? "carousel-card carousel-card-active" : "carousel-card"}  rounded-lg`}>
+            <img className="card-image w-full h-full  filter-none object-fill rounded-lg"  src={img.url} alt="carousel" />
+            <div className="card-overlay h-full w-full absolute bg-black bg-opacity-50 flex flex-col justify-center items-center rounded-lg"> 
               <h2>{img.title}</h2>
               <p>{img.description}</p>
             </div>
