@@ -8,7 +8,7 @@ import HeroSection from "./components/HeroSection";
 import LatestNews from "./components/NewsCards/LatestNews";
 import HighlightsSection from "./components/Highlights/HighlightsSection";
 import Footer from "./components/Footer";
-import Model from "./components/modelsSection/model";
+// import Model from "./components/modelsSection/model";
 import SparklesBackground from "./components/SparklesBackground";
 import RecUpd from "./components/RecentUpdates/RecUpd";
 
@@ -39,7 +39,7 @@ function App() {
               <RecUpd />
             </div>
             <LatestNews />
-            <Model />
+            {/* <Model /> */}
           </SparklesBackground>
           <Footer />
         </>

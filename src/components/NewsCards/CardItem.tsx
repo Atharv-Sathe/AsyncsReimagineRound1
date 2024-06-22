@@ -11,7 +11,7 @@ export default function CardItem({
   return (
     <li
       className={cn(
-        "flex flex-col gap-1 w-80 rounded-sm p-1 shadow-sm relative flex-grow-0 flex-shrink-0 basis-auto items-start bg-white",
+        "news-card font-space-mono  flex flex-col gap-1 w-80 rounded-sm p-1 shadow-sm relative flex-grow-0 flex-shrink-0 basis-auto items-start",
         className
       )}
     >
@@ -26,13 +26,13 @@ export default function CardItem({
         loading="lazy"
       />
 
-      <p className="text-sm">{cardItem.dateString}</p>
+      <p className="text-sm font-space-mono text-isro-orange">{cardItem.dateString}</p>
 
-      <h3 className="text-xl font-[Ubuntu]">{cardItem.title}</h3>
+      <h3 className="text-xl font-space-mono">{cardItem.title}</h3>
       <a
         href={cardItem.hrefUrl}
         target="_blank"
-        className=" text-indigo-950 underline"
+        className=" text-isro-blue underline font-space-mono"
       >
         Read More
       </a>

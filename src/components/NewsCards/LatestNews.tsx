@@ -7,6 +7,7 @@ import './LatestNews.css';
 export default function LatestNews() {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     addAnimation();
@@ -62,6 +63,13 @@ export default function LatestNews() {
     }
   };
 
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  }
 
   return (
     <div
@@ -86,12 +94,14 @@ export default function LatestNews() {
       </button>
       <ul
         className={cn(
-          "flex flex-row min-w-full w-max overflow-x-auto no-scrollbar",
+          "news-container  flex flex-row min-w-full w-max overflow-x-auto no-scrollbar",
           start && "animate-scroll ",
-          "hover:[animation-play-state:paused]",
-          "scroll-smooth"
+          "scroll-smooth",
+          isHovering && "hover:[animation-play-state:paused]"
         )}
         ref={scrollerRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {NewsItems.map((item) => (
           <CardItem key={item.title} cardItem={item} className="m-1" />
@@ -100,4 +110,3 @@ export default function LatestNews() {
     </div>
   );
 }
-
