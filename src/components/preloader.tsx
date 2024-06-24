@@ -110,7 +110,7 @@ export default function Preloader() {
               <img
                 src={rocketImg}
                 alt="Rocket Launching"
-                className="w-48 h-auto"
+                className="w-48 h-auto filter-none"
                 style={{ transform: `translateY(${rocketY}px)` }}
               />
             </div>
@@ -120,7 +120,7 @@ export default function Preloader() {
               <img
                 src={isroImg}
                 alt="ISRO Logo"
-                className="preloader__isro"
+                className="preloader__isro filter-none"
                 style={{
                   width: "200px",
                   height: "auto",
