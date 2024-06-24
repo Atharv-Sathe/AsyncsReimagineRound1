@@ -3,15 +3,16 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import Satellite from "../../components/modelsSection/Sattelite";
 import { HeroScrollDemo } from "../missions/pageMain";
+import ContentAnimation from "./missionsContent";
 
 export default function Model() {
   return (
-    <>
+    <div className="border-2 border-white">
     <div className="flex flex-col">
       <h2 className="text-5xl text-white pl-20 pt-20 pb-10 font-space">Missions</h2>
     </div>
     <div className="flex h-screen mb-[2rem]">
-    <div className="w-1/3 h-full">
+    <div className="w-1/4 h-full">
       <Canvas className="h-full w-full p-2 overflow-hidden relative">
         <ambientLight intensity={1.5} />
         <PerspectiveCamera 
@@ -30,10 +31,11 @@ export default function Model() {
         <Environment preset="sunset" />
       </Canvas>
     </div>
-    <div className="w-2/3 h-full overflow-hidden">
-      <HeroScrollDemo />
+    <div className="w-3/4 h-full ">
+      {/* <HeroScrollDemo /> */}
+      <ContentAnimation/>
     </div>
   </div>
-  </>
+  </div>
   );
 }

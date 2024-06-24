@@ -1,0 +1,32 @@
+/* Apply styles to the main headings */
+.missions-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 10px 5px;
+  margin-bottom: 1.5rem;
+  color: rgb(222, 153, 42);
+}
+
+/* Apply styles to the container of headings */
+.missions-heading-container {
+  display: flex;;
+}
+
+/* Apply styles to the first column */
+.heading-1 {
+  flex: 1 1 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Apply styles to the second column */
+.heading-2 {
+  display: flex ;
+  justify-content: center;
+  padding: 10px 5px;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: rgb(222, 153, 42);
+}
