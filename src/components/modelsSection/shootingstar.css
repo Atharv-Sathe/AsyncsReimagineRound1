@@ -1,0 +1,24 @@
+.particle-container {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Particle color and opacity */
+    border-radius: 50%;
+    animation: particleMove 1s linear infinite; /* Particle movement animation */
+  }
+  
+  @keyframes particleMove {
+    from {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+  }
+  
