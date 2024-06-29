@@ -8,9 +8,19 @@ import { Suspense } from "react";
 import Satellite from "../../components/modelsSection/Sattelite";
 import { ImagesSliderDemo } from "./imagesDisplaycomp";
 
-export default function Missions({ rtl }: { rtl?: boolean }) {
+export default function Missions({
+  rtl,
+  title,
+  description,
+  hrefUrl,
+}: {
+  rtl?: boolean;
+  title: string;
+  description: string;
+  hrefUrl: string;
+}) {
   return (
-    <div className="border-2 border-white h-screen">
+    <div className=" h-screen">
       <div className="flex h-full">
         {/* Left Column with Missions Heading and Canvas (30% Width) */}
         {!rtl && (
@@ -54,7 +64,11 @@ export default function Missions({ rtl }: { rtl?: boolean }) {
                       </video>
                     </div> */}
                 <div className="w-full h-full">
-                  <ImagesSliderDemo />
+                  <ImagesSliderDemo
+                    title={title}
+                    description={description}
+                    hrefUrl={hrefUrl}
+                  />
                 </div>
               </div>
               {/* </div> */}

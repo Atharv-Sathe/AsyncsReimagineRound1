@@ -129,9 +129,8 @@ export const ImagesSlider = ({
   };
 
   const areImagesLoaded = loadedImages.length > 0;
-  console.log(loading);
 
-  return (
+  return !loading || !areImagesLoaded ? (
     <div
       className={cn(
         "overflow-hidden h-full w-full relative flex items-center justify-center",
@@ -161,6 +160,10 @@ export const ImagesSlider = ({
           />
         </AnimatePresence>
       )}
+    </div>
+  ) : (
+    <div className="flex items-center justify-center h-full w-full">
+      <p className="text-white">Loading...</p>
     </div>
   );
 };
