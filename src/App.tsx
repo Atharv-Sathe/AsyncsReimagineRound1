@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 // import Model from "./components/modelsSection/model";
 import SparklesBackground from "./components/SparklesBackground";
 import RecUpd from "./components/RecentUpdates/RecUpd";
+import Model from "./components/modelsSection/model";
 // import ThreeJsComp from "./components/modelsSection/webglComp";
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
               <RecUpd />
             </div>
             <LatestNews />
-            {/* <Model /> */}
+            <Model />
           </SparklesBackground>
           {/* <h2 className="text-4xl text-center text-white">3D Models</h2> */}
           {/* <ThreeJsComp /> */}
