@@ -16,9 +16,9 @@ function RecUpd() {
 
 
     return (
-        <section className="recent-updates w-[40%] flex flex-col pt-20  items-center">
+        <section className="recent-updates w-[40%] h-[50vh] flex flex-col pt-12  items-center">
             <h1 className="text-white text-5xl font-space w-fit">Recent Updates</h1>
-            <div className="images-slider-wrapper w-[70%] h-[49%] mt-12 relative rounded-lg hover:shadow-[0_0_8px_5px] hover:shadow-white hover:border-2">
+            <div className="images-slider-wrapper w-[70%] h-[35vh] mt-12 relative rounded-lg hover:shadow-[0_0_8px_5px] hover:shadow-white hover:border-2">
                 <ImagesSlider images={imgsData} children={null} overlay={null} autoplay={true} direction="up" />
             </div>
         </section>

@@ -3,6 +3,7 @@ import { cn } from "../../utils/cn";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import './ImagesSlider.css';
+import readMore from "../../assets/images/readmore.png";
 
 export const ImagesSlider = ({
   images,
@@ -130,7 +131,7 @@ export const ImagesSlider = ({
   return (
     <div
       className={cn(
-        "group overflow-hidden h-full w-full relative flex items-center justify-center",
+        "overflow-hidden h-[35vh] w-full relative flex items-center justify-center",
         className
       )}
       style={{
@@ -166,12 +167,12 @@ export const ImagesSlider = ({
               variants={slideVariants}
               // onMouseEnter={handleMouseEnter} 
               onMouseLeave={handleMouseLeave} 
-          className={`updates-info text-white absolute w-full h-full rounded-lg bottom-0 left-0 ${(isHovered) ? "info-active" : "info-inactive"} flex flex-col items-center justify-end font-space-mono`}>
-              <h1 className="title text-3xl font-bold text-isro-orange">{images[currentIndex]["title"]}</h1>
-              <p className="descrip text-xl mb-7 text-isro-blue">{images[currentIndex]["description"]}</p>
+          className={`updates-info text-white  absolute w-full h-[35vh] rounded-lg bottom-0 left-0 ${(isHovered) ? "info-active" : "info-inactive"} flex flex-col items-center justify-end font-space-mono`}>
+              <h1 className="title text-[1.5vw] font-bold text-isro-orange">{images[currentIndex]["title"]}</h1>
+              <p className="descrip text-[1vw] mb-8  text-isro-blue">{images[currentIndex]["description"]}</p>
               <a target="_blank" rel="noopener noreferrer" href={images[currentIndex]["link"]}
-              className=" link mb-5 text-white text-lg underline hover:text-isro-blue"
-              >Read More</a>
+              className=" link  text-white text-[0.75vw] underline hover:text-isro-blue absolute top-3 left-3"
+              ><img className="h-6 w-6"  src={readMore} alt="readmore" /></a>
           </motion.div>
         </AnimatePresence>
       )}

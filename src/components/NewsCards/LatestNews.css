@@ -1,0 +1,51 @@
+@keyframes arrowMove {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    93% {
+        transform: translateX(-30px);
+        opacity: 1;
+    }
+
+    96% { /* Intermediate step to start reducing opacity more gradually */
+        transform: translateX(-30px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+}
+
+.arrowMove {
+    animation: arrowMove 2.5s ease-in 0s infinite forwards;
+}
+
+.news-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(2px); /* Blur effect */
+    border-radius: 10px; /* Optional: rounded corners */
+    /* border: 1px solid rgba(255, 255, 255, 0.18);  */
+    color: white; /* Adjust text color for better visibility */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.05); 
+    z-index: 4;
+    background-color: black;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.3); 
+}
+
+
+
+.news-container:hover .news-card {
+    opacity: 0.5; /* Dim other cards on hover */
+}
+
+.news-container .news-card:hover {
+    opacity: 1; /* Keep hovered card at full opacity */
+}
