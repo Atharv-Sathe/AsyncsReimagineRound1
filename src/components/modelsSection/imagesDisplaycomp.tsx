@@ -1,0 +1,52 @@
+"use client";
+import { motion } from "framer-motion";
+import { ImagesSlider } from "./images-slider";
+
+export function ImagesSliderDemo({
+  title,
+  description,
+  hrefUrl,
+}: {
+  title: string;
+  description: string;
+  hrefUrl: string;
+}) {
+  const images = [
+    "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/MRM_8583.JPG.webp",
+    "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/ch3_9_medium.jpg.webp",
+    "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P19_medium.jpg.webp",
+    "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/ch3_3.jpg.webp",
+  ];
+  return (
+    <ImagesSlider className="h-full w-30 rounded-lg" images={images}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.6,
+        }}
+        className="z-50 flex flex-col justify-center items-center bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 h-full w-full"
+      >
+        <motion.p className="font-bold text-xl md:text-6xl text-center [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)] bg-clip-text text-isro-orange py-4">
+          {title}
+        </motion.p>
+
+        <motion.p className="text-center text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_90%)] text-lg md:text-2xl mt-4">
+          {description}
+        </motion.p>
+        <a href={hrefUrl} target="_blank">
+          <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+            <span>More →</span>
+            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+          </button>
+        </a>
+      </motion.div>
+    </ImagesSlider>
+  );
+}
