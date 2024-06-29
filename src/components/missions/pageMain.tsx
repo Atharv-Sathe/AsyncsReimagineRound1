@@ -1,6 +1,6 @@
 "use client";
 import { ContainerScroll } from "./container-scro-animation";
-import SpaceShipGame from "./SpaceShipGame";
+// import SpaceShipGame from "./SpaceShipGame";
 
 export function HeroScrollDemo() {
   return (
@@ -17,7 +17,7 @@ export function HeroScrollDemo() {
         <img
           src="/chandrayan.webp"
           alt="hero"
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          className="mx-auto rounded-2xl object-cover h-full object-left-top filter-none"
           draggable={false}
         />
       </ContainerScroll>
