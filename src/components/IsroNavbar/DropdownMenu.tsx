@@ -177,7 +177,7 @@ interface DropdownMenuProps {
 
 function DropdownMenu({ title }: DropdownMenuProps) {
   return (
-    <div id="DropdownMenu" className="absolute -left-6 max-w-fit">
+    <div id="DropdownMenu" className="absolute -left-6 max-w-fit glassmorph mt-3">
       <ul className="w-max text-base text-left">
         {dropDownList[title].map((item, index) => (
           <li
