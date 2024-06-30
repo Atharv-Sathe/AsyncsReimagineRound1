@@ -20,7 +20,7 @@ function Menu({isOpen} : {isOpen: boolean}) {
             <ul className="flex flex-col justify-end gap-4 pl-10 pt-4 border-t-2 border-isro-blue">
                 {titles.map((title) => (
                     <li
-                        className="flex items-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+                        className="flex items-center text-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
                         key={title}
                     >
                     <NavItemSide title={title}/>
