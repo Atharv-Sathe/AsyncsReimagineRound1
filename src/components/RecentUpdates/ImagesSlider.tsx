@@ -13,6 +13,7 @@ export const ImagesSlider = ({
   className,
   autoplay = true,
   direction = "up",
+  isSmall
 }: {
   images: { src: string; title: string; description: string; link: string }[];
   children: React.ReactNode;
@@ -21,6 +22,7 @@ export const ImagesSlider = ({
   className?: string;
   autoplay?: boolean;
   direction?: "up" | "down";
+  isSmall?: boolean;
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -131,7 +133,7 @@ export const ImagesSlider = ({
   return (
     <div
       className={cn(
-        "overflow-hidden h-[35vh] w-full relative flex items-center justify-center",
+        `overflow-hidden ${isSmall ? "h-full" : "h-[35vh]"}  w-full relative flex items-center justify-center`,
         className
       )}
       style={{
@@ -167,11 +169,11 @@ export const ImagesSlider = ({
               variants={slideVariants}
               // onMouseEnter={handleMouseEnter} 
               onMouseLeave={handleMouseLeave} 
-          className={`updates-info text-white  absolute w-full h-[35vh] rounded-lg bottom-0 left-0 ${(isHovered) ? "info-active" : "info-inactive"} flex flex-col items-center justify-end font-space-mono`}>
-              <h1 className="title text-[1.5vw] font-bold text-isro-orange">{images[currentIndex]["title"]}</h1>
-              <p className="descrip text-[1vw] mb-8  text-isro-blue">{images[currentIndex]["description"]}</p>
+          className={`updates-info text-white  absolute w-full h-full rounded-lg bottom-0 left-0 ${(isHovered) ? "info-active" : "info-inactive"} flex flex-col items-center justify-end font-space-mono`}>
+              <h1 className={`title ${isSmall ? "text-[3vw]"  : "text-[1.5vw]"} font-bold text-isro-orange`}>{images[currentIndex]["title"]}</h1>
+              <p className={`descrip ${isSmall ? "text-[2vw]"  : "text-[1vw]"} mb-8  text-isro-blue`}>{images[currentIndex]["description"]}</p>
               <a target="_blank" rel="noopener noreferrer" href={images[currentIndex]["link"]}
-              className=" link  text-white text-[0.75vw] underline hover:text-isro-blue absolute top-3 left-3"
+              className=" link  text-white text-[0.75vw]  hover:text-isro-blue absolute top-3 left-3"
               ><img className="h-6 w-6"  src={readMore} alt="readmore" /></a>
           </motion.div>
         </AnimatePresence>

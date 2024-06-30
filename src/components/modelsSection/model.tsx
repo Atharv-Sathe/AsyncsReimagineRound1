@@ -1,88 +1,54 @@
-import {
-  Environment,
-  OrbitControls,
-  PerspectiveCamera,
-} from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
-import Satellite from "../../components/modelsSection/Sattelite";
-import { ImagesSliderDemo } from "./imagesDisplaycomp";
+import Missions from "./Missions";
 
 export default function Model() {
   return (
-    <div className="border-2 border-white h-screen">
-      <div className="flex h-full">
-        {/* Left Column with Missions Heading and Canvas (30% Width) */}
-        <div className="w-3/10 flex flex-col items-center ">
-          <h2 className="text-5xl text-white font-space">Missions</h2>
-          <div className="w-full h-full space-50vh">
-            <Canvas className="h-full w-full overflow-hidden relative ">
-              <ambientLight intensity={1.5} />
-              <PerspectiveCamera
-                makeDefault
-                position={[10, 0, 0]}
-                fov={50}
-                near={0.2}
-                far={1000}
-              />
-              <OrbitControls />
-              <Suspense fallback={null}>
-                <group position={[0, 0, 0]} scale={[0.7, 0.7, 0.7]}>
-                  <Satellite />
-                </group>
-              </Suspense>
-              <Environment preset="sunset" />
-            </Canvas>
-          </div>
-        </div>
-        <div className="w-7/10 h-full flex flex-col racesWrapper ">
-          <div className="flex-grow space-50vh ">
-            <div className="h-full racesWrapper">
-              <div className="flex flex-col">
-                <div className="sticky top-0">
-                  <div className="w-full h-[10vh] flex items-center justify-center bg-gray-800">
-                    <h1 className="text-white text-2xl ">Sticky Heading</h1>
-                  </div>
-                  <div className="w-full h-[60vh] flex">
-                    {/* Video container (70%) */}
-                    <div className="w-7/10 overflow-hidden">
-                      <video controls className="w-full h-full object-cover">
-                        <source
-                          src="https://www.isro.gov.in/media_isro/video/chandrayaan3/LVM3_M4OnboardVideo.webm"
-                          type="video/webm"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div className="w-3/10 h-[60vh]">
-                      <ImagesSliderDemo />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="h-[30vh] ">
-            <div className="bg-gray-800 h-full rounded races">
-              <h3 className="text-3xl text-white font-space w-full flex">
-                Additional Content
-              </h3>
-              <h3 className="text-3xl text-white font-space w-full flex">
-                Additional Content
-              </h3>
-              <h3 className="text-3xl text-white font-space w-full flex">
-                Additional Content
-              </h3>
-              <h3 className="text-3xl text-white font-space w-full flex">
-                Additional Content
-              </h3>
-              <h3 className="text-3xl text-white font-space w-full flex">
-                Additional Content
-              </h3>
-            </div>
-          </div>
+    <>
+      <h2 className="text-5xl text-white pl-20 pt-20 pb-10 font-space">
+        Missions
+      </h2>
+      <div className="flex flex-col gap-16">
+        <Missions
+          title="Chandrayaan-3"
+          description="Chandrayaan-3 is a follow-on mission to Chandrayaan-2 to demonstrate
+          end-to-end capability in safe landing and roving on the lunar surface.
+          It consists of Lander and Rover configuration. It will be launched by
+          LVM3 from SDSC SHAR, Sriharikota. The propulsion module will carry the
+          lander and rover configuration till 100 km lunar orbit. The propulsion
+          module has Spectro-polarimetry of Habitable Planet Earth (SHAPE)
+          payload to study the spectral and Polari metric measurements of Earth
+          from the lunar orbit."
+          hrefUrl="https://isro.gov.in/Chandrayaan3_Details.html"
+        />
+        <Missions
+          rtl
+          title="ADITYA-L1"
+          description="Aditya-L1, India's dedicated solar study satellite, carries seven 
+          indigenous payloads developed by ISRO and Indian academic institutes.
+          Positioned at Lagrange Point 1 (L1), approximately 1.5 million km away 
+          from Earth, Aditya-L1 maintains an uninterrupted view of the Sun, studying its outer atmosphere. 
+          It won't land on the Sun or approach it any closer. 
+          This strategic placement allows Aditya-L1 to access solar radiation and magnetic storms before they are influenced 
+          by Earth's magnetic field and atmosphere, optimizing its operational efficiency. "
+          hrefUrl="https://www.isro.gov.in/Aditya_L1-MissionDetails.html"
+        />
+        <Missions
+          title="Gaganyaan"
+          description="The primary mandate of HSFC is to spearhead ISRO's Gaganyaan programme through co-ordinated efforts and 
+          focus all the activities that are carried out in other ISRO centres, research labs in India, Indian academia and 
+          Industries towards accomplishing the mission. HSFC, as the lead Centre for Human space flight activities conforms 
+          to high standards of reliability and human safety in undertaking R&D activities in new technology areas, such as 
+          life support systems, Human Factors Engineering, Bioastronautics, Crew training and Human rating & certification."
+          hrefUrl="https://www.isro.gov.in/Gaganyaan.html"
+        />
+        <div className="flex justify-center z-10">
+          <a href="https://www.isro.gov.in/Mission.html" target="_blank">
+            <p className="text-xl p-4 mb-16 rounded border-2
+              transition-colorsn duration-500 text-white  hover:bg-white hover:text-black hover:[box-shadow:_0_0_10px_2px_rgba(255_255_255/_100%)] hover:rounded=[5px]">
+              More Missions
+            </p>
+          </a>
         </div>
       </div>
-    </div>
+    </>
   );
 }

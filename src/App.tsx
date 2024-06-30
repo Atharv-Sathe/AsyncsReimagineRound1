@@ -14,11 +14,23 @@ import RecUpd from "./components/RecentUpdates/RecUpd";
 import ThreeJsComp from "./components/modelsSection/webglComp";
 import Model from "./components/modelsSection/model";
 
-
-
+const breakpointSidebar = 1200;
+// const breakpointMobile = 640;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  
+  const [isSmall, setIsSmall] = useState(window.innerWidth < breakpointSidebar);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerWidth < breakpointSidebar);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     // setIsLoading(false);
     setTimeout(() => {
@@ -34,18 +46,18 @@ function App() {
           <div id="bg-video-wrapper" className=" -z-10 h-screen object-cover">
             <BGVideo />
           </div>
-          <Navbar />
+          {isSmall ? <Sidebar/>  :  <Navbar />}
           <HeroSection />
           <SparklesBackground>
-            <div className="flex flex-row h-[50vh]">
-              <HighlightsSection />
-              <RecUpd />
+            <div className={`${isSmall ? "flex flex-col w-screen h-fit"  : "flex flex-row h-[50vh] w-screen" }`}>
+              <HighlightsSection isSmall={isSmall}/>
+              <RecUpd isSmall={isSmall}/>
             </div>
             <LatestNews />
             <Model />
           </SparklesBackground>
-          <h2 className="text-4xl text-center text-white">3D Models</h2>
-          <ThreeJsComp />
+          {/* <h2 className="text-4xl text-center text-white">3D Models</h2> */}
+          {/* <ThreeJsComp /> */}
           <Footer />
         </>
       )}

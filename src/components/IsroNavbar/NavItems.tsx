@@ -1,9 +1,16 @@
-import { useEffect, useRef } from 'react';
-import NavItem from './NavItem';
-import './NavItems.css';
+import { useEffect, useRef } from "react";
+import NavItem from "./NavItem";
+import "./NavItems.css";
 
 function NavItems() {
-  const titles = ['About', 'Activities', 'Services', 'Programmes', 'Resources', 'Engagements'];
+  const titles = [
+    "About",
+    "Activities",
+    "Services",
+    "Programmes",
+    "Resources",
+    "Engagements",
+  ];
   const homeRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
@@ -12,29 +19,40 @@ function NavItems() {
       const rect = target.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      target.style.setProperty('--x', `${x}px`);
-      target.style.setProperty('--y', `${y}px`);
+      target.style.setProperty("--x", `${x}px`);
+      target.style.setProperty("--y", `${y}px`);
     };
 
     const homeElement = homeRef.current;
     if (homeElement) {
-      homeElement.addEventListener('mousemove', handleMouseMove);
+      homeElement.addEventListener("mousemove", handleMouseMove);
 
       // Cleanup function to remove the event listener when the component unmounts
       return () => {
-        homeElement.removeEventListener('mousemove', handleMouseMove);
+        homeElement.removeEventListener("mousemove", handleMouseMove);
       };
     }
   }, []);
 
-
   return (
-    <div className='glassmorph flex-col justify-center py-3 px-4 h-fit'>
-        <ul className=' text-white text-xl  flex items-center gap-8 h-fit font-ubuntu'>
-            <li className='home hover:cursor-pointer drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]' key="Home" ref={homeRef}>Home</li>
-            {titles.map(title => <li className='flex items-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'  key={title} ><NavItem  title={title} />
-            </li>)}
-        </ul>
+    <div className="glassmorph flex-col justify-center py-3 px-4 h-fit">
+      <ul className=" text-white text-xl  flex items-center gap-8 h-fit font-ubuntu">
+        <li
+          className="home hover:cursor-pointer drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+          key="Home"
+          ref={homeRef}
+        >
+          <a href="/">Home</a>
+        </li>
+        {titles.map((title) => (
+          <li
+            className="flex items-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+            key={title}
+          >
+            <NavItem title={title} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

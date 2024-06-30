@@ -1,9 +1,9 @@
-import React, { FC, useEffect, useRef } from 'react';
-import { GLTF } from 'three/addons/loaders/GLTFLoader.js';
-import { useGLTF } from '@react-three/drei';
-import { GroupProps } from '@react-three/fiber';
-import * as THREE from 'three';
-import { gsap } from 'gsap';
+import { FC, useEffect, useRef } from "react";
+import { GLTF } from "three/addons/loaders/GLTFLoader.js";
+import { useGLTF } from "@react-three/drei";
+import { GroupProps } from "@react-three/fiber";
+import * as THREE from "three";
+import { gsap } from "gsap";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -19,14 +19,21 @@ type GLTFResult = GLTF & {
 };
 
 const Model: FC<GroupProps> = (props) => {
-  const { nodes, materials } = useGLTF('/Satellite1.glb') as unknown as GLTFResult;
-  const groupRef = useRef<THREE.Group>();
+  const { nodes, materials } = useGLTF(
+    "/Satellite1.glb"
+  ) as unknown as GLTFResult;
+  const groupRef = useRef<THREE.Group>(null);
 
   useEffect(() => {
     if (!groupRef.current) return;
 
     // Animation using GSAP
-    gsap.to(groupRef.current.rotation, { y: Math.PI * 2, duration: 10, repeat: -1, ease: 'linear' });
+    gsap.to(groupRef.current.rotation, {
+      y: Math.PI * 2,
+      duration: 10,
+      repeat: -1,
+      ease: "linear",
+    });
   }, []);
 
   if (!nodes || !materials) {
@@ -60,6 +67,6 @@ const Model: FC<GroupProps> = (props) => {
   );
 };
 
-useGLTF.preload('/Satellite1.glb');
+useGLTF.preload("/Satellite1.glb");
 
 export default Model;
