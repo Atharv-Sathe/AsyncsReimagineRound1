@@ -41,7 +41,7 @@ export default function Model() {
           hrefUrl="https://www.isro.gov.in/Aditya_L1-MissionDetails.html"
           images={[
             "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/B0001129.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/IST_1111_18624.JPG",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRckstsyqpbQDcPoSDsrGRD6ekC27Zz5AETg&s",
             "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/IST_18624_1.JPG",
             "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/8_4.JPG",
           ]}
