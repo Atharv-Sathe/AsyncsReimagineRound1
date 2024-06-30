@@ -14,18 +14,31 @@ import RecUpd from "./components/RecentUpdates/RecUpd";
 import Model from "./components/modelsSection/model";
 // import ThreeJsComp from "./components/modelsSection/webglComp";
 import Sidebar from "./components/IsroSidebar/Sidebar";
+import FooterMobile from "./components/FooterMobile";
+
 
 const breakpointSidebar = 1200;
-// const breakpointMobile = 640;
+const breakpointMobile = 780;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   
   const [isSmall, setIsSmall] = useState(window.innerWidth < breakpointSidebar);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpointMobile);
 
   useEffect(() => {
     const handleResize = () => {
       setIsSmall(window.innerWidth < breakpointSidebar);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < breakpointMobile);
     };
     window.addEventListener("resize", handleResize);
 
@@ -59,7 +72,7 @@ function App() {
           </SparklesBackground>
           {/* <h2 className="text-4xl text-center text-white">3D Models</h2> */}
           {/* <ThreeJsComp /> */}
-          <Footer />
+          {isMobile ? <FooterMobile/> : <Footer />}
         </>
       )}
     </>
