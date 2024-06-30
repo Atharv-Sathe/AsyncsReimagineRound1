@@ -11,8 +11,8 @@ import Footer from "./components/Footer";
 // import Model from "./components/modelsSection/model";
 import SparklesBackground from "./components/SparklesBackground";
 import RecUpd from "./components/RecentUpdates/RecUpd";
-import ThreeJsComp from "./components/modelsSection/webglComp";
 import Model from "./components/modelsSection/model";
+import Sidebar from "./components/IsroSidebar/Sidebar";
 
 const breakpointSidebar = 1200;
 // const breakpointMobile = 640;
@@ -58,6 +58,7 @@ function App() {
           </SparklesBackground>
           {/* <h2 className="text-4xl text-center text-white">3D Models</h2> */}
           {/* <ThreeJsComp /> */}
+          
           <Footer />
         </>
       )}
