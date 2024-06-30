@@ -182,7 +182,7 @@ function DropdownSide({ title }: DropdownSideProps) {
         {dropDownList[title].map((item, index) => (
           <li
             key={index}
-            className=" "
+            className="text-xl py-2"
           >
             <a href={item[0]} target="_blank">
               {item[1]}

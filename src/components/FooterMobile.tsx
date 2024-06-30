@@ -8,7 +8,7 @@ export default function FooterMobile() {
   return (
     <footer className=" relative">
       <div className="flex flex-wrap justify-between p-6">
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">Address</h4>
           <div className="address">
             <p className="text-white">
@@ -33,7 +33,7 @@ export default function FooterMobile() {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">About</h4>
           <a
             href="https://www.isro.gov.in/RTI.html"
@@ -78,7 +78,7 @@ export default function FooterMobile() {
             Web Information Manager
           </a>
         </div>
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">Support</h4>
           <a
             href="https://www.isro.gov.in/contact.html"

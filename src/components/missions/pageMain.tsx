@@ -8,7 +8,7 @@ export function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-2xl md:text-[2rem]   font-semibold text-white">
+            <h1 className="text-2xl lg:text-[2rem]   font-semibold text-white">
               Unleash the power of
             </h1>
           </>

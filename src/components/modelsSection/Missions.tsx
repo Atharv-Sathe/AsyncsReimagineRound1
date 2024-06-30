@@ -13,21 +13,23 @@ export default function Missions({
   title,
   description,
   hrefUrl,
+  images
 }: {
   rtl?: boolean;
   title: string;
   description: string;
   hrefUrl: string;
+  images: string[];
 }) {
   return (
-    <div className=" h-screen">
-      <div className="flex h-full">
+    <div className=" h-[75vw] lg:h-screen">
+      <div className="flex h-[75vw] lg:h-full">
         {/* Left Column with Missions Heading and Canvas (30% Width) */}
         {!rtl && (
-          <div className="w-3/10 flex flex-col items-center ">
+          <div className="w-3/10 lg:flex flex-col items-center hidden">
             {/* <h2 className="text-5xl text-white font-space">Missions</h2> */}
-            <div className="w-full h-full space-50vh">
-              <Canvas className="h-full w-full overflow-hidden relative ">
+            <div className="w-full h-[75vw] lg:h-full space-50vh">
+              <Canvas className="h-[75vw] lg:h-full w-full overflow-hidden relative ">
                 <ambientLight intensity={1.5} />
                 <PerspectiveCamera
                   makeDefault
@@ -47,15 +49,15 @@ export default function Missions({
             </div>
           </div>
         )}
-        <div className="w-full h-full flex flex-col racesWrapper ">
+        <div className="w-full h-[75vw] lg:h-full flex flex-col racesWrapper ">
           <div className="flex-grow font-space ">
-            <div className="h-full racesWrapper">
+            <div className="h-[75vw] lg:h-full racesWrapper">
               {/* <div className="flex flex-col"> */}
               {/* <div className="sticky top-0"> */}
-              <div className="w-full h-full ">
+              <div className="w-full h-[75vw] lg:h-full ">
                 {/* Video container (70%) */}
                 {/* <div className="w-7/10 overflow-hidden">
-                      <video controls className="w-full h-full object-cover">
+                      <video controls className="w-full h-[75vw] lg:h-full object-cover">
                         <source
                           src="https://www.isro.gov.in/media_isro/video/chandrayaan3/LVM3_M4OnboardVideo.webm"
                           type="video/webm"
@@ -63,11 +65,12 @@ export default function Missions({
                         Your browser does not support the video tag.
                       </video>
                     </div> */}
-                <div className="w-full h-full">
+                <div className="w-full h-[75vw] lg:h-full">
                   <ImagesSliderDemo
                     title={title}
                     description={description}
                     hrefUrl={hrefUrl}
+                    images={images}
                   />
                 </div>
               </div>
@@ -77,10 +80,10 @@ export default function Missions({
           </div>
         </div>
         {rtl && (
-          <div className="w-3/10 flex flex-col items-center ">
+          <div className="w-3/10 lg:flex flex-col items-center hidden">
             {/* <h2 className="text-5xl text-white font-space">Missions</h2> */}
-            <div className="w-full h-full space-50vh">
-              <Canvas className="h-full w-full overflow-hidden relative ">
+            <div className="w-full h-[75vw] lg:h-full space-50vh">
+              <Canvas className="h-[75vw] lg:h-full w-full overflow-hidden relative ">
                 <ambientLight intensity={1.5} />
                 <PerspectiveCamera
                   makeDefault
