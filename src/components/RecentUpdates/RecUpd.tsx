@@ -14,9 +14,9 @@ const imgsData = [
 function RecUpd({isSmall} : {isSmall: boolean}) {
     
     return (
-        <section className={`${isSmall  ? "w-full flex flex-col items-center h-fit"  : "recent-updates w-[40%] h-[50vh] flex flex-col pt-12  items-center"}`}>
-            <h1 className={`${isSmall  ? "mt-10"  : "w-fit"} text-white text-5xl font-space`}>Recent Updates</h1>
-            <div className={` ${isSmall  ? "h-[50vh] w-[70vw] mt-10"  : "w-[70%] h-[35vh] mt-12 relative"}  images-slider-wrapper rounded-lg hover:shadow-[0_0_8px_5px] hover:shadow-white hover:border-2`}>
+        <section className={`${isSmall  ? "w-full flex flex-col justify-center items-center h-fit"  : "recent-updates w-[40%] h-[50vh] flex flex-col pt-12  items-center"}`}>
+            <h1 className={`${isSmall  ? "mt-10 text-4xl"  : "w-fit text-5xl"} text-white  font-space`}>Recent Updates</h1>
+            <div className={` ${isSmall  ? "h-[75vw] w-[70vw] mt-10"  : "w-[70%] h-[35vh] mt-12 relative"}  images-slider-wrapper rounded-lg hover:shadow-[0_0_8px_5px] hover:shadow-white hover:border-2`}>
                 <ImagesSlider images={imgsData} children={null} overlay={null} autoplay={true} direction="up" isSmall={isSmall}/>
             </div>
         </section>

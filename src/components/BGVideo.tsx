@@ -1,6 +1,6 @@
 import { useState } from "react";
 import hero from "../assets/videos/hero-vid.webm";
-import MRM_5106 from "../assets/images/MRM_5106.webp";
+import MRM_5106 from "../assets/images/MRM_5106_50.webp";
 import { cn } from "../utils/cn";
 export default function BGVideo({
   className,

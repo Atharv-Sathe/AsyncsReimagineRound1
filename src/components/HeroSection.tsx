@@ -8,7 +8,9 @@ function HeroSection() {
                 <h2 id="hero-descrip" className=" fadeInSlideUp-medium  text-2xl mt-4 font-space-mono">Government of India</h2>
             </div>
 
-            <button id="learn-more-btn"  className="fadeInSlideUp-slow  mt-4  p-4 border-2 font-space-mono">Learn More</button>
+            <button id="learn-more-btn"  className="fadeInSlideUp-slow  mt-4  p-4 border-2 font-space-mono">
+            <a href="https://www.isro.gov.in/" target="_blank">Learn More</a>
+            </button>
         </section>
     );
 }

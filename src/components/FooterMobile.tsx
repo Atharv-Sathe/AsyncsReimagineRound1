@@ -1,6 +1,10 @@
 import Wave from 'react-wavify'
+import { useState } from 'react'
 
-export default function Footer() {
+export default function FooterMobile() {
+
+    const [showMore, setShowMore] = useState(false)
+
   return (
     <footer className=" relative">
       <div className="flex flex-wrap justify-between p-6">
@@ -105,7 +109,10 @@ export default function Footer() {
             Site Map
           </a>
         </div>
-        <div className="w-full lg:w-1/5 p-2">
+        <button onClick={() => setShowMore(!showMore)}  className='text-isro-orange font-bold p-2'>
+            {showMore ? 'Show Less' : 'Show More'}
+        </button>
+        <div className={`${!showMore ? "hidden"  : "w-full"} p-2`}>
           <h4 className="text-[#F47216] font-bold mb-2">Resources</h4>
           <a
             href="https://www.isro.gov.in/Archives.html"
@@ -164,7 +171,7 @@ export default function Footer() {
             e-Saral Hindi Vakyakosh
           </a>
         </div>
-        <div className="w-full lg:w-1/5 p-2">
+        <div className={`${!showMore ? "hidden"  : "w-full"} p-2`}>
           <h4 className="text-[#F47216] font-bold mb-2">External Links</h4>
           <a
             href="https://www.isro.gov.in/ISROAPP/fFBFNC"

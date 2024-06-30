@@ -170,8 +170,8 @@ export const ImagesSlider = ({
               // onMouseEnter={handleMouseEnter} 
               onMouseLeave={handleMouseLeave} 
           className={`updates-info text-white  absolute w-full h-full rounded-lg bottom-0 left-0 ${(isHovered) ? "info-active" : "info-inactive"} flex flex-col items-center justify-end font-space-mono`}>
-              <h1 className={`title ${isSmall ? "text-[3vw]"  : "text-[1.5vw]"} font-bold text-isro-orange`}>{images[currentIndex]["title"]}</h1>
-              <p className={`descrip ${isSmall ? "text-[2vw]"  : "text-[1vw]"} mb-8  text-isro-blue`}>{images[currentIndex]["description"]}</p>
+              <h1 className={`title ${isSmall ? "text-[8vw]"  : "text-[1.5vw]"} text-center font-bold text-isro-orange`}>{images[currentIndex]["title"]}</h1>
+              <p className={`descrip ${isSmall ? "text-[6vw]"  : "text-[1vw]"} text-center mb-8  text-isro-blue`}>{images[currentIndex]["description"]}</p>
               <a target="_blank" rel="noopener noreferrer" href={images[currentIndex]["link"]}
               className=" link  text-white text-[0.75vw]  hover:text-isro-blue absolute top-3 left-3"
               ><img className="h-6 w-6"  src={readMore} alt="readmore" /></a>
