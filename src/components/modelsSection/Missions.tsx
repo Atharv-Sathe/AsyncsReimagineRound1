@@ -5,7 +5,7 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import Satellite from "../../components/modelsSection/Sattelite";
+
 import { ImagesSliderDemo } from "./imagesDisplaycomp";
 
 export default function Missions({
@@ -13,13 +13,15 @@ export default function Missions({
   title,
   description,
   hrefUrl,
-  images
+  images,
+  modelComponent,
 }: {
   rtl?: boolean;
   title: string;
   description: string;
   hrefUrl: string;
   images: string[];
+  modelComponent: JSX.Element;
 }) {
   return (
     <div className=" h-[75vw] lg:h-screen">
@@ -40,9 +42,9 @@ export default function Missions({
                 />
                 <OrbitControls />
                 <Suspense fallback={null}>
-                  <group position={[0, 0, 0]} scale={[0.7, 0.7, 0.7]}>
-                    <Satellite />
-                  </group>
+                  {/* <group position={[0, 0, 0]} scale={[0.5, 0.5, 0.5]}> */}
+                    {modelComponent}
+                  {/* </group> */}
                 </Suspense>
                 <Environment preset="sunset" />
               </Canvas>
@@ -95,7 +97,7 @@ export default function Missions({
                 <OrbitControls />
                 <Suspense fallback={null}>
                   <group position={[0, 0, 0]} scale={[0.7, 0.7, 0.7]}>
-                    <Satellite />
+                    {modelComponent}
                   </group>
                 </Suspense>
                 <Environment preset="sunset" />

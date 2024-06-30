@@ -22,7 +22,7 @@ export default function CardItem({
             : "https://via.placeholder.com/150"
         }
         alt={cardItem.title}
-        className="h-40 w-80 object-cover filter-none hidden lg:block"
+        className="h-40 w-80 object-cover filter-none "
         loading="lazy"
       />
 

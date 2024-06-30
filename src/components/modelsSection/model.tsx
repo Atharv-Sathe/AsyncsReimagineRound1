@@ -1,9 +1,11 @@
 import Missions from "./Missions";
-
+import ChandrayaanModel from "./ModelComponents/Chandrayaan";
+import { GaganyaanModel } from "./ModelComponents/Gaganyaan";
+import { PSLVModel } from "./ModelComponents/PSLVComponent";
 export default function Model() {
   return (
-    <>
-      <h2 className="text-5xl text-white pl-20 pt-20 pb-10 font-space">
+    <div className="flex flex-col justify-center items-center">
+      <h2 className="text-5xl text-white pb-10 font-space">
         Missions
       </h2>
       <div className="flex flex-col gap-10 lg:gap-16">
@@ -24,6 +26,7 @@ export default function Model() {
             "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P12_medium.jpg.webp",
             "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/R_img10.jpeg.webp",
           ]}
+          modelComponent={<ChandrayaanModel />}
         />
         <Missions
           rtl
@@ -38,10 +41,11 @@ export default function Model() {
           hrefUrl="https://www.isro.gov.in/Aditya_L1-MissionDetails.html"
           images={[
             "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/B0001129.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/IST_1111_18624.JPG",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRckstsyqpbQDcPoSDsrGRD6ekC27Zz5AETg&s",
             "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/IST_18624_1.JPG",
             "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/8_4.JPG",
           ]}
+          modelComponent={<PSLVModel />}
         />
         <Missions
           title="Gaganyaan"
@@ -57,6 +61,7 @@ export default function Model() {
             "https://cdn.britannica.com/98/240698-050-AD1947D9/Gaganyaan-orbital-spacecraft-illustration-India-manned-space-flight.jpg",
             "https://images.indianexpress.com/2024/02/ISRO-astronauts-gaganyaan-20240227.jpg",
           ]}
+          modelComponent={<GaganyaanModel />}
         />
         <div className="flex justify-center z-10">
           <a href="https://www.isro.gov.in/Mission.html" target="_blank">
@@ -69,6 +74,6 @@ export default function Model() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
