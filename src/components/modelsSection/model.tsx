@@ -19,10 +19,10 @@ export default function Model() {
           from the lunar orbit."
           hrefUrl="https://isro.gov.in/Chandrayaan3_Details.html"
           images={[
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/MRM_8583.JPG.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/ch3_9_medium.jpg.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P19_medium.jpg.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/ch3_3.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/DKS_9683Copy.JPG.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/acoustic_test.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P12_medium.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/R_img10.jpeg.webp",
           ]}
         />
         <Missions
@@ -37,10 +37,10 @@ export default function Model() {
           by Earth's magnetic field and atmosphere, optimizing its operational efficiency. "
           hrefUrl="https://www.isro.gov.in/Aditya_L1-MissionDetails.html"
           images={[
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/MRM_8583.JPG.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/ch3_9_medium.jpg.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P19_medium.jpg.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/ch3_3.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/B0001129.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/IST_1111_18624.JPG",
+            "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/IST_18624_1.JPG",
+            "https://www.isro.gov.in/media_isro/image/index/Aditya-L1/8_4.JPG",
           ]}
         />
         <Missions
@@ -52,10 +52,10 @@ export default function Model() {
           life support systems, Human Factors Engineering, Bioastronautics, Crew training and Human rating & certification."
           hrefUrl="https://www.isro.gov.in/Gaganyaan.html"
           images={[
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/MRM_8583.JPG.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/ch3_9_medium.jpg.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P19_medium.jpg.webp",
-            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/ch3_3.jpg.webp",
+            "https://cdn.mos.cms.futurecdn.net/cuMru2kAw7PG7jNtcEbUag.jpg",
+            "https://akm-img-a-in.tosshub.com/sites/visualstory/wp/2024/01/Gaganyaan-1.png",
+            "https://cdn.britannica.com/98/240698-050-AD1947D9/Gaganyaan-orbital-spacecraft-illustration-India-manned-space-flight.jpg",
+            "https://images.indianexpress.com/2024/02/ISRO-astronauts-gaganyaan-20240227.jpg",
           ]}
         />
         <div className="flex justify-center z-10">
