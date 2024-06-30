@@ -9,11 +9,6 @@ function Navbar() {
     
     const {scrollY} = useScroll();
 
-    // useEffect(() => {
-    //     const unsub = scrollY.on("change", (latest) => console.log(latest));
-    //     return () => unsub();
-    // }, [scrollY])
-
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious();
         // Check if previous is not undefined before proceeding

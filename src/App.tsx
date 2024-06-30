@@ -13,9 +13,25 @@ import SparklesBackground from "./components/SparklesBackground";
 import RecUpd from "./components/RecentUpdates/RecUpd";
 import Model from "./components/modelsSection/model";
 // import ThreeJsComp from "./components/modelsSection/webglComp";
+import Sidebar from "./components/IsroSidebar/Sidebar";
+
+const breakpointSidebar = 1200;
+// const breakpointMobile = 640;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  
+  const [isSmall, setIsSmall] = useState(window.innerWidth < breakpointSidebar);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerWidth < breakpointSidebar);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     // setIsLoading(false);
     setTimeout(() => {
@@ -31,7 +47,7 @@ function App() {
           <div id="bg-video-wrapper" className=" -z-10 h-screen object-cover">
             <BGVideo />
           </div>
-          <Navbar />
+          {isSmall ? <Sidebar/>  :  <Navbar />}
           <HeroSection />
           <SparklesBackground>
             <div className="flex flex-row h-[50vh]">
