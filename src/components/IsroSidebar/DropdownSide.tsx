@@ -1,4 +1,4 @@
-import "./DropdownMenu.css";
+import redirect from "../../assets/images/redirect.png"
 
 interface DropDownItem {
   [key: string]: string[][];
@@ -171,24 +171,23 @@ const dropDownList: DropDownItem = {
   ],
 };
 
-interface DropdownMenuProps {
+interface DropdownSideProps {
   title: string;
 }
 
-function DropdownMenu({ title }: DropdownMenuProps) {
+function DropdownSide({ title }: DropdownSideProps) {
   return (
-    <div id="DropdownMenu" className="absolute -left-6 max-w-fit">
-      <ul className="w-max text-base text-left">
+    <div id="DropdownSide" className="relative left-6 max-w-fit">
+      <ul className="w-max text-base text-left pt-2 flex flex-col gap-2">
         {dropDownList[title].map((item, index) => (
           <li
             key={index}
-            className="hover:bg-gray-200 hover:cursor-pointer hover:text-black p-1 rounded-md
-           transition-colors duration-75 ease-out
-          "
+            className=" "
           >
             <a href={item[0]} target="_blank">
               {item[1]}
             </a>
+            <img src={redirect} alt="Redirects"  className="h-4 w-4 inline-block ml-2"/>
           </li>
         ))}
       </ul>
@@ -196,4 +195,4 @@ function DropdownMenu({ title }: DropdownMenuProps) {
   );
 }
 
-export default DropdownMenu;
+export default DropdownSide;

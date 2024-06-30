@@ -1,3 +1,7 @@
+img {
+    filter: invert(1) brightness(2);
+}
+
 .arrow-up {
     transform: rotate(180deg);
     transform-origin: center;
@@ -14,10 +18,14 @@
     transform: translateX(-50%);
     width: 0;
     height: 2.5px;
-    background-color: var(--isro-blue); /* Change this to the color you want for the underline */
+    background-color: var(--isro-orange); /* Change this to the color you want for the underline */
     transition: width 0.3s ease-in-out;
 }
 
-.show-underline:hover::after {
+.show-underline.active::after {
     width: 100%;
+}
+
+.show-underline.inactive::after {
+    width: 0;
 }
