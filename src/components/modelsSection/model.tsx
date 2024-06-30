@@ -6,7 +6,7 @@ export default function Model() {
       <h2 className="text-5xl text-white pl-20 pt-20 pb-10 font-space">
         Missions
       </h2>
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-10 lg:gap-16">
         <Missions
           title="Chandrayaan-3"
           description="Chandrayaan-3 is a follow-on mission to Chandrayaan-2 to demonstrate
@@ -18,6 +18,12 @@ export default function Model() {
           payload to study the spectral and Polari metric measurements of Earth
           from the lunar orbit."
           hrefUrl="https://isro.gov.in/Chandrayaan3_Details.html"
+          images={[
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/MRM_8583.JPG.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/ch3_9_medium.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P19_medium.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/ch3_3.jpg.webp",
+          ]}
         />
         <Missions
           rtl
@@ -30,6 +36,12 @@ export default function Model() {
           This strategic placement allows Aditya-L1 to access solar radiation and magnetic storms before they are influenced 
           by Earth's magnetic field and atmosphere, optimizing its operational efficiency. "
           hrefUrl="https://www.isro.gov.in/Aditya_L1-MissionDetails.html"
+          images={[
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/MRM_8583.JPG.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/ch3_9_medium.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P19_medium.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/ch3_3.jpg.webp",
+          ]}
         />
         <Missions
           title="Gaganyaan"
@@ -39,11 +51,19 @@ export default function Model() {
           to high standards of reliability and human safety in undertaking R&D activities in new technology areas, such as 
           life support systems, Human Factors Engineering, Bioastronautics, Crew training and Human rating & certification."
           hrefUrl="https://www.isro.gov.in/Gaganyaan.html"
+          images={[
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/MRM_8583.JPG.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/ch3_9_medium.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/resized/P19_medium.jpg.webp",
+            "https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/ch3_3.jpg.webp",
+          ]}
         />
         <div className="flex justify-center z-10">
           <a href="https://www.isro.gov.in/Mission.html" target="_blank">
-            <p className="text-xl p-4 mb-16 rounded border-2
-              transition-colorsn duration-500 text-white  hover:bg-white hover:text-black hover:[box-shadow:_0_0_10px_2px_rgba(255_255_255/_100%)] hover:rounded=[5px]">
+            <p
+              className="text-xl p-4 mb-16 rounded border-2
+              transition-colorsn duration-500 text-white  hover:bg-white hover:text-black hover:[box-shadow:_0_0_10px_2px_rgba(255_255_255/_100%)] hover:rounded=[5px]"
+            >
               More Missions
             </p>
           </a>

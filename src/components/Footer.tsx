@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className=" relative">
       <div className="flex flex-wrap justify-between p-6">
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">Address</h4>
           <div className="address">
             <p className="text-white">
@@ -29,7 +29,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">About</h4>
           <a
             href="https://www.isro.gov.in/RTI.html"
@@ -74,7 +74,7 @@ export default function Footer() {
             Web Information Manager
           </a>
         </div>
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">Support</h4>
           <a
             href="https://www.isro.gov.in/contact.html"
@@ -105,7 +105,7 @@ export default function Footer() {
             Site Map
           </a>
         </div>
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">Resources</h4>
           <a
             href="https://www.isro.gov.in/Archives.html"
@@ -164,7 +164,7 @@ export default function Footer() {
             e-Saral Hindi Vakyakosh
           </a>
         </div>
-        <div className="w-full md:w-1/5 p-2">
+        <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">External Links</h4>
           <a
             href="https://www.isro.gov.in/ISROAPP/fFBFNC"
