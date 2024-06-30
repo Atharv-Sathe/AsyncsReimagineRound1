@@ -1,5 +1,6 @@
 import { useState } from "react";
 import hero from "../assets/videos/hero-vid.webm";
+import MRM_5106 from "../assets/images/MRM_5106.webp";
 import { cn } from "../utils/cn";
 export default function BGVideo({
   className,
@@ -46,6 +47,11 @@ export default function BGVideo({
           </svg>
         )}
       </button>
+      <img
+        src={MRM_5106}
+        alt="ISRO"
+        className="absolute top-0 left-0 w-full h-screen object-cover filter-none -z-10"
+      />
       <video
         autoPlay
         playsInline
@@ -53,7 +59,7 @@ export default function BGVideo({
         loop
         id="myVideo"
         className={cn(
-          "top-0 left-0 w-full h-screen z-0 object-cover",
+          "top-0 left-0 w-full h-screen z-0 object-cover hidden lg:block",
           className
         )}
         {...props}
@@ -61,7 +67,10 @@ export default function BGVideo({
         <source src={hero} type="video/webm" />
         Your browser does not support HTML5 video.
       </video>
-      <div id="black-overlay" className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-50  brightness-50">
+      <div
+        id="black-overlay"
+        className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-50  brightness-50"
+      >
         {/* This div puts a black-overlay over the video. */}
       </div>
     </div>
