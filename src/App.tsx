@@ -59,7 +59,7 @@ function App() {
           </SparklesBackground>
           {/* <h2 className="text-4xl text-center text-white">3D Models</h2> */}
           {/* <ThreeJsComp /> */}
-          <Footer />
+          <Footer isSmall={isSmall} />
         </>
       )}
     </>

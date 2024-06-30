@@ -1,4 +1,7 @@
-export default function Footer() {
+import { useState } from "react";
+
+export default function Footer({ isSmall }: { isSmall: boolean }) {
+  const [showMore, setShowMore] = useState(false);
   return (
     <footer className=" p-6">
       <div className="flex flex-wrap justify-between">
@@ -103,158 +106,177 @@ export default function Footer() {
             Site Map
           </a>
         </div>
-        <div className="w-full md:w-1/5 p-2">
-          <h4 className="text-white font-bold mb-2">Resources</h4>
-          <a
-            href="https://www.isro.gov.in/Archives.html"
-            title="Archives"
-            className="block text-white hover:underline"
-          >
-            Archives
-          </a>
-          <a
-            href="https://www.isro.gov.in/IndiaSpacePolicy.html"
-            title="Space Policy"
-            className="block text-white hover:underline"
-          >
-            Space Policy
-          </a>
-          <a
-            href="https://www.isro.gov.in/ParliamentQuestions.html"
-            title="Parliament Questions"
-            className="block text-white hover:underline"
-          >
-            Parliament Questions
-          </a>
-          <a
-            href="https://www.isro.gov.in/Press.html"
-            title="Press"
-            className="block text-white hover:underline"
-          >
-            Press Release
-          </a>
-          <a
-            href="https://www.isro.gov.in/Careers.html"
-            title="Careers"
-            className="block text-white hover:underline"
-          >
-            Careers
-          </a>
-          <a
-            href="https://www.isro.gov.in/Students.html"
-            title="Students"
-            className="block text-white hover:underline"
-          >
-            Students
-          </a>
-          <a
-            href="https://www.isro.gov.in/Tenders.html"
-            title="Tenders"
-            className="block text-white hover:underline"
-          >
-            Tenders
-          </a>
-          <a
-            href="https://www.isro.gov.in/media_isro/pdf/bilingual_100_sentences.pdf"
-            title="e-Saral Hindi Vakyakosh"
-            className="block text-white hover:underline"
-          >
-            e-Saral Hindi Vakyakosh
-          </a>
-        </div>
-        <div className="w-full md:w-1/5 p-2">
-          <h4 className="text-white font-bold mb-2">External Links</h4>
-          <a
-            href="https://www.isro.gov.in/ISROAPP/fFBFNC"
-            title="Feedback"
-            target="_blank"
-            className="block text-white hover:underline"
-          >
-            Feedback ↗
-          </a>
-          <a
-            href="https://www.pib.gov.in/"
-            target="_blank"
-            title="PIB"
-            className="block text-white hover:underline"
-          >
-            PIB ↗
-          </a>
-          <a
-            href="http://cpao.nic.in/Pensioner/ppo_status.php"
-            target="_blank"
-            title="Check Your 7th CPC Pension Revision Status"
-            className="block text-white hover:underline"
-          >
-            Check Your 7th CPC Pension Revision Status ↗
-          </a>
-          <a
-            href="https://pensionersportal.gov.in"
-            target="_blank"
-            title="Pensioners' Portal"
-            className="block text-white hover:underline"
-          >
-            Pensioners' Portal ↗
-          </a>
-          <h4 className="text-white font-bold mt-4 mb-2">Portals</h4>
-          <a
-            href="https://igrasp.isro.gov.in"
-            className="block text-white hover:underline"
-          >
-            I-Grasp ↗
-          </a>
-          <a
-            href="https://jigyasa.iirs.gov.in"
-            className="block text-white hover:underline"
-          >
-            ISRO STEM ↗
-          </a>
-          <a
-            href="https://www.isro.gov.in/Virtual_Space_Museum.html"
-            className="block text-white hover:underline"
-          >
-            SPARK
-          </a>
-          <a
-            href="https://www.isro.gov.in/MOSDAC.html"
-            className="block text-white hover:underline"
-          >
-            MOSDAC
-          </a>
-          <a
-            href="https://www.issdc.gov.in"
-            className="block text-white hover:underline"
-          >
-            ISSDC ↗
-          </a>
-          <a
-            href="https://www.isro.gov.in/https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html"
-            className="block text-white hover:underline"
-          >
-            Bhoonidhi ↗
-          </a>
-          <a
-            href="https://bhuvan.nrsc.gov.in"
-            className="block text-white hover:underline"
-          >
-            Bhuvan ↗
-          </a>
-          <a
-            href="https://vedas.sac.gov.in"
-            className="block text-white hover:underline"
-          >
-            VEDAS ↗
-          </a>
-          <a
-            href="https://ndem.nrsc.gov.in"
-            className="block text-white hover:underline"
-          >
-            NDEM ↗
-          </a>
-        </div>
-        <div className="w-full p-2 text-white text-center">
-          CopyRight © {new Date().getFullYear()} ISRO. All Rights Reserved.
-        </div>
+        {!showMore && (
+          <>
+            <button
+              onClick={() => setShowMore(true)}
+              className="z-10 text-slate-400 pl-2"
+            >
+              Show More
+            </button>
+            <div className="w-full p-2 text-white text-center">
+              CopyRight © {new Date().getFullYear()} ISRO. All Rights Reserved.
+            </div>
+          </>
+        )}
+        {!isSmall ||
+          (showMore && (
+            <>
+              <div className="w-full md:w-1/5 p-2">
+                <h4 className="text-white font-bold mb-2">Resources</h4>
+                <a
+                  href="https://www.isro.gov.in/Archives.html"
+                  title="Archives"
+                  className="block text-white hover:underline"
+                >
+                  Archives
+                </a>
+                <a
+                  href="https://www.isro.gov.in/IndiaSpacePolicy.html"
+                  title="Space Policy"
+                  className="block text-white hover:underline"
+                >
+                  Space Policy
+                </a>
+                <a
+                  href="https://www.isro.gov.in/ParliamentQuestions.html"
+                  title="Parliament Questions"
+                  className="block text-white hover:underline"
+                >
+                  Parliament Questions
+                </a>
+                <a
+                  href="https://www.isro.gov.in/Press.html"
+                  title="Press"
+                  className="block text-white hover:underline"
+                >
+                  Press Release
+                </a>
+                <a
+                  href="https://www.isro.gov.in/Careers.html"
+                  title="Careers"
+                  className="block text-white hover:underline"
+                >
+                  Careers
+                </a>
+                <a
+                  href="https://www.isro.gov.in/Students.html"
+                  title="Students"
+                  className="block text-white hover:underline"
+                >
+                  Students
+                </a>
+                <a
+                  href="https://www.isro.gov.in/Tenders.html"
+                  title="Tenders"
+                  className="block text-white hover:underline"
+                >
+                  Tenders
+                </a>
+                <a
+                  href="https://www.isro.gov.in/media_isro/pdf/bilingual_100_sentences.pdf"
+                  title="e-Saral Hindi Vakyakosh"
+                  className="block text-white hover:underline"
+                >
+                  e-Saral Hindi Vakyakosh
+                </a>
+              </div>
+              <div className="w-full md:w-1/5 p-2">
+                <h4 className="text-white font-bold mb-2">External Links</h4>
+                <a
+                  href="https://www.isro.gov.in/ISROAPP/fFBFNC"
+                  title="Feedback"
+                  target="_blank"
+                  className="block text-white hover:underline"
+                >
+                  Feedback ↗
+                </a>
+                <a
+                  href="https://www.pib.gov.in/"
+                  target="_blank"
+                  title="PIB"
+                  className="block text-white hover:underline"
+                >
+                  PIB ↗
+                </a>
+                <a
+                  href="http://cpao.nic.in/Pensioner/ppo_status.php"
+                  target="_blank"
+                  title="Check Your 7th CPC Pension Revision Status"
+                  className="block text-white hover:underline"
+                >
+                  Check Your 7th CPC Pension Revision Status ↗
+                </a>
+                <a
+                  href="https://pensionersportal.gov.in"
+                  target="_blank"
+                  title="Pensioners' Portal"
+                  className="block text-white hover:underline"
+                >
+                  Pensioners' Portal ↗
+                </a>
+                <h4 className="text-white font-bold mt-4 mb-2">Portals</h4>
+                <a
+                  href="https://igrasp.isro.gov.in"
+                  className="block text-white hover:underline"
+                >
+                  I-Grasp ↗
+                </a>
+                <a
+                  href="https://jigyasa.iirs.gov.in"
+                  className="block text-white hover:underline"
+                >
+                  ISRO STEM ↗
+                </a>
+                <a
+                  href="https://www.isro.gov.in/Virtual_Space_Museum.html"
+                  className="block text-white hover:underline"
+                >
+                  SPARK
+                </a>
+                <a
+                  href="https://www.isro.gov.in/MOSDAC.html"
+                  className="block text-white hover:underline"
+                >
+                  MOSDAC
+                </a>
+                <a
+                  href="https://www.issdc.gov.in"
+                  className="block text-white hover:underline"
+                >
+                  ISSDC ↗
+                </a>
+                <a
+                  href="https://www.isro.gov.in/https://bhoonidhi.nrsc.gov.in/bhoonidhi/home.html"
+                  className="block text-white hover:underline"
+                >
+                  Bhoonidhi ↗
+                </a>
+                <a
+                  href="https://bhuvan.nrsc.gov.in"
+                  className="block text-white hover:underline"
+                >
+                  Bhuvan ↗
+                </a>
+                <a
+                  href="https://vedas.sac.gov.in"
+                  className="block text-white hover:underline"
+                >
+                  VEDAS ↗
+                </a>
+                <a
+                  href="https://ndem.nrsc.gov.in"
+                  className="block text-white hover:underline"
+                >
+                  NDEM ↗
+                </a>
+              </div>
+              <div className="w-full p-2 text-white text-center">
+                CopyRight © {new Date().getFullYear()} ISRO. All Rights
+                Reserved.
+              </div>
+            </>
+          ))}
       </div>
     </footer>
   );
