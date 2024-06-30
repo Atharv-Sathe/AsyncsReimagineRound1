@@ -50,9 +50,9 @@ function App() {
           {isSmall ? <Sidebar/>  :  <Navbar />}
           <HeroSection />
           <SparklesBackground>
-            <div className="flex flex-row h-[50vh]">
-              <HighlightsSection />
-              <RecUpd />
+            <div className={`${isSmall ? "flex flex-col w-screen h-fit"  : "flex flex-row h-[50vh] w-screen" }`}>
+              <HighlightsSection isSmall={isSmall}/>
+              <RecUpd isSmall={isSmall}/>
             </div>
             <LatestNews />
             <Model />
