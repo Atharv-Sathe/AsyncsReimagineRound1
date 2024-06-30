@@ -1,9 +1,11 @@
+import Wave from 'react-wavify'
+
 export default function Footer() {
   return (
-    <footer className=" p-6">
-      <div className="flex flex-wrap justify-between">
+    <footer className=" relative">
+      <div className="flex flex-wrap justify-between p-6">
         <div className="w-full md:w-1/5 p-2">
-          <h4 className="text-white font-bold mb-2">Address</h4>
+          <h4 className="text-[#F47216] font-bold mb-2">Address</h4>
           <div className="address">
             <p className="text-white">
               ISRO Headquarters, Antariksh Bhavan, New BEL Road <br />
@@ -28,7 +30,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-full md:w-1/5 p-2">
-          <h4 className="text-white font-bold mb-2">About</h4>
+          <h4 className="text-[#F47216] font-bold mb-2">About</h4>
           <a
             href="https://www.isro.gov.in/RTI.html"
             title="RTI"
@@ -73,7 +75,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="w-full md:w-1/5 p-2">
-          <h4 className="text-white font-bold mb-2">Support</h4>
+          <h4 className="text-[#F47216] font-bold mb-2">Support</h4>
           <a
             href="https://www.isro.gov.in/contact.html"
             title="Contact us"
@@ -104,7 +106,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="w-full md:w-1/5 p-2">
-          <h4 className="text-white font-bold mb-2">Resources</h4>
+          <h4 className="text-[#F47216] font-bold mb-2">Resources</h4>
           <a
             href="https://www.isro.gov.in/Archives.html"
             title="Archives"
@@ -163,7 +165,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="w-full md:w-1/5 p-2">
-          <h4 className="text-white font-bold mb-2">External Links</h4>
+          <h4 className="text-[#F47216] font-bold mb-2">External Links</h4>
           <a
             href="https://www.isro.gov.in/ISROAPP/fFBFNC"
             title="Feedback"
@@ -196,7 +198,7 @@ export default function Footer() {
           >
             Pensioners' Portal ↗
           </a>
-          <h4 className="text-white font-bold mt-4 mb-2">Portals</h4>
+          <h4 className="text-[#F47216] font-bold mt-4 mb-2">Portals</h4>
           <a
             href="https://igrasp.isro.gov.in"
             className="block text-white hover:underline"
@@ -233,7 +235,7 @@ export default function Footer() {
           >
             Bhoonidhi ↗
           </a>
-          <a
+          {/* <a
             href="https://bhuvan.nrsc.gov.in"
             className="block text-white hover:underline"
           >
@@ -250,12 +252,51 @@ export default function Footer() {
             className="block text-white hover:underline"
           >
             NDEM ↗
-          </a>
+          </a> */}
         </div>
-        <div className="w-full p-2 text-white text-center">
-          CopyRight © {new Date().getFullYear()} ISRO. All Rights Reserved.
+        <div className="w-full p-2 text-black text-center">
+            CopyRight © {new Date().getFullYear()} Asyncs. All Rights Reserved.
         </div>
       </div>
+      <Wave 
+          fill= '#0E88D3'
+          paused={false}
+          className='absolute bottom-0 -z-20'
+          opacity="0.3"
+          options={{
+            height: 20,
+            amplitude: 10,
+            speed: 0.2,
+            points: 3,
+          }}
+        >
+      </Wave>
+      <Wave 
+          fill='#0E88D3'
+          paused={false}
+          className='absolute bottom-0 -z-20'
+          opacity="0.80"
+          options={{
+            height: 75,
+            amplitude: 20,
+            speed: 0.3,
+            points: 2,
+          }}
+        >
+      </Wave>
+      <Wave 
+          fill='#0E88D3'
+          paused={false}
+          className='absolute bottom-0 -z-20'
+          opacity="0.5"
+          options={{
+            height: 45,
+            amplitude: 30,
+            speed: 0.1,
+            points: 4,
+          }}
+        >
+      </Wave>
     </footer>
   );
 }
