@@ -15,6 +15,7 @@ import Model from "./components/modelsSection/model";
 import Sidebar from "./components/IsroSidebar/Sidebar";
 import FooterMobile from "./components/FooterMobile";
 import { LatestNewsMobile } from "./components/NewsCards/LatestNewsMobile";
+import ParticleBackground from "./components/preloaderNew";
 
 const breakpointSidebar = 1200;
 const breakpointMobile = 780;
@@ -49,12 +50,14 @@ function App() {
     // setIsLoading(false);
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 10000);
   }, []);
   return (
     <>
       {isLoading ? (
-        <Preloader />
+        <SparklesBackground>
+          <ParticleBackground/>
+        </SparklesBackground>
       ) : (
         <>
           <div id="bg-video-wrapper" className=" -z-10 h-screen object-cover">

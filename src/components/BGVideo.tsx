@@ -1,5 +1,5 @@
 import { useState } from "react";
-import hero from "../assets/videos/hero-vid.webm";
+import hero from "/vdeo3.webm";
 import MRM_5106 from "../assets/images/MRM_5106_50.webp";
 import { cn } from "../utils/cn";
 export default function BGVideo({
@@ -69,9 +69,8 @@ export default function BGVideo({
       </video>
       <div
         id="black-overlay"
-        className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-50  brightness-50"
+        className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-30"
       >
-        {/* This div puts a black-overlay over the video. */}
       </div>
     </div>
   );
