@@ -5,7 +5,7 @@ import { PSLVModel } from "./ModelComponents/PSLVComponent";
 export default function Model() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <h2 className="text-5xl text-white pb-10 font-space">
+      <h2 className="text-5xl text-white pb-10 font-space mt-10">
         Missions
       </h2>
       <div className="flex flex-col gap-10 lg:gap-16">

@@ -76,7 +76,7 @@ export default function LatestNews() {
       className="flex flex-col scroller relative z-20 w-full overflow-hidden"
       ref={containerRef}
     >
-      <h2 className="lg:text-5xl text-4xl text-white pl-20 pt-20 pb-10 font-space">
+      <h2 className="lg:text-5xl text-4xl text-white mx-auto  pt-20 pb-10 font-space">
         Latest News
       </h2>
       <button
