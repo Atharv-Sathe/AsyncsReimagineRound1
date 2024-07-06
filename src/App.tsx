@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import BGVideo from "./components/BGVideo";
 import Navbar from "./components/IsroNavbar/Navbar";
-import Preloader from "./components/preloader";
+// import Preloader from "./components/preloader";
 import HeroSection from "./components/HeroSection";
 import LatestNews from "./components/NewsCards/LatestNews";
 import HighlightsSection from "./components/Highlights/HighlightsSection";

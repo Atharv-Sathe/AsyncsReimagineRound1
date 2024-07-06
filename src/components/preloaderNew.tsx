@@ -1,6 +1,6 @@
 // src/components/ParticleBackground.tsx
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
 
