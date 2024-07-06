@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import DropdownMenu from './DropdownMenu';
 import dropIcon from '../../assets/images/down-chevron.png';
 import './NavItem.css';
@@ -21,13 +21,28 @@ function DropDownArrow({isHovering}: DropDownArrowProps) {
 
 function NavItem({ title }: NavItemProps) {
   const [isHovering, setIsHovering] = useState(false);
+  const hoverTimeoutRef = useRef<number | null>(null); // Declare and initialize hoverTimeoutRef
+
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsHovering(false);
+    }, 150);
+  }
 
   return (
     <>
     <button 
-      className={`show-underline relative`}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      className={`show-underline relative `}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {title}
       {isHovering && <DropdownMenu title={title} />}

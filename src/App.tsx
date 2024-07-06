@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import BGVideo from "./components/BGVideo";
 import Navbar from "./components/IsroNavbar/Navbar";
-import Preloader from "./components/preloader";
+// import Preloader from "./components/preloader";
 import HeroSection from "./components/HeroSection";
 import LatestNews from "./components/NewsCards/LatestNews";
 import HighlightsSection from "./components/Highlights/HighlightsSection";
@@ -15,6 +15,7 @@ import Model from "./components/modelsSection/model";
 import Sidebar from "./components/IsroSidebar/Sidebar";
 import FooterMobile from "./components/FooterMobile";
 import { LatestNewsMobile } from "./components/NewsCards/LatestNewsMobile";
+import ParticleBackground from "./components/preloaderNew";
 
 const breakpointSidebar = 1200;
 const breakpointMobile = 780;
@@ -54,7 +55,9 @@ function App() {
   return (
     <>
       {isLoading ? (
-        <Preloader />
+        <SparklesBackground>
+          <ParticleBackground/>
+        </SparklesBackground>
       ) : (
         <>
           <div id="bg-video-wrapper" className=" -z-10 h-screen object-cover">
