@@ -73,7 +73,7 @@ export default function LatestNews() {
 
   return (
     <div
-      className="flex flex-col scroller relative z-20 w-full overflow-hidden"
+      className="flex flex-col scroller items-center relative z-20 w-full overflow-hidden"
       ref={containerRef}
     >
       <h2 className="lg:text-5xl text-4xl text-white mx-auto  pt-20 pb-10 font-space">
