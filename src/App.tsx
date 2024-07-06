@@ -50,7 +50,7 @@ function App() {
     // setIsLoading(false);
     setTimeout(() => {
       setIsLoading(false);
-    }, 10000);
+    }, 3000);
   }, []);
   return (
     <>
