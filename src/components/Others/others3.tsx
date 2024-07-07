@@ -67,8 +67,10 @@ export function Slide(props: {
         />
       </div>
       <article className="slide__content">
-        <h2 className="slide__headline mb-4 opacity-55">{props.slide.headline}</h2>
-        <a href="#" className="slide__action btn">
+        <h2 className="slide__headline mb-6 text-isro-orange text-5xl">{props.slide.headline}</h2>
+        <a href="#" className="slide__action btn
+          transition-colors  duration-500 text-isro-blue font-bold bg-transparent  hover:bg-white hover:text-black hover:[box-shadow:_0_0_10px_2px_rgba(255_255_255/_100%)] hover:rounded=[5px]
+        ">
           {props.slide.button}
         </a>
       </article>
@@ -80,14 +82,16 @@ export function SliderControl({
   type,
   title,
   handleClick,
+  color,
 }: {
   type: string;
   title: string;
+  color: string;
   handleClick: () => void;
 }) {
   return (
     <button className={`btn btn--${type}`} title={title} onClick={handleClick}>
-      <svg className="icon" viewBox="0 0 24 24">
+      <svg className={`icon fill-${color}`} viewBox="0 0 24 24">
         <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
       </svg>
     </button>
@@ -141,11 +145,13 @@ export function Slider(props: { heading: string; slides: SlideType[] }) {
           type="previous"
           title="Go to previous slide"
           handleClick={handlePreviousClick}
+          color="isro-blue"
         />
         <SliderControl
           type="next"
           title="Go to next slide"
           handleClick={handleNextClick}
+          color="isro-blue"
         />
       </div>
     </div>

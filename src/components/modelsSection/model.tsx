@@ -66,7 +66,7 @@ export default function Model() {
         <div className="flex justify-center z-10">
           <a href="https://www.isro.gov.in/Mission.html" target="_blank">
             <p
-              className="text-xl p-4 mb-16 rounded border-2
+              className="text-xl p-4 rounded border-2
               transition-colorsn duration-500 text-white  hover:bg-white hover:text-black hover:[box-shadow:_0_0_10px_2px_rgba(255_255_255/_100%)] hover:rounded=[5px]"
             >
               More Missions
