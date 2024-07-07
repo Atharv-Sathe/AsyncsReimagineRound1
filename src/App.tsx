@@ -36,16 +36,10 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setIsSmall(window.innerWidth < breakpointSidebar);
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
       setIsMobile(window.innerWidth < breakpointMobile);
     };
+
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
