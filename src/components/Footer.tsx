@@ -2,7 +2,7 @@ import Wave from 'react-wavify'
 
 export default function Footer() {
   return (
-    <footer className=" relative">
+    <footer className=" relative mt-16">
       <div className="flex flex-wrap justify-between p-6">
         <div className="w-full lg:w-1/5 p-2">
           <h4 className="text-[#F47216] font-bold mb-2">Address</h4>

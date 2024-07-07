@@ -1,10 +1,9 @@
-"use client";
+
 import { ContainerScroll } from "./container-scro-animation";
-// import SpaceShipGame from "./SpaceShipGame";
 
 export function HeroScrollDemo() {
   return (
-    <div className="flex flex-grow overflow-hidden">
+    <div className="flex flex-grow overflow-hidden my-0">
       <ContainerScroll
         titleComponent={
           <>
