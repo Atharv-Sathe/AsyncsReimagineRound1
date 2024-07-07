@@ -89,8 +89,8 @@ function App() {
             <Model />
             <Heading />
             <Slider slides={slideData} heading="Other Projects" />
+            <ContactSection />
           </SparklesBackground>
-          <ContactSection />
           {/* <Others4 /> */}
           {isMobile ? <FooterMobile /> : <Footer />}
         </>
