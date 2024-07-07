@@ -20,6 +20,7 @@ import { Slider } from "./components/Others/others3";
 import Heading from "./components/Others/heading";
 import { slideData } from "./utils/data";
 import Launch from "./components/Launch";
+import ContactSection from "./components/contact";
 // import Others4 from "./components/Others/others4";
 
 const breakpointSidebar = 1200;
@@ -62,7 +63,7 @@ function App() {
       {isLoading ? (
         <SparklesBackground>
           {/* <ParticleBackground /> */}
-          <Launch setIsLoading={setIsLoading}/>
+          <Launch setIsLoading={setIsLoading} />
         </SparklesBackground>
       ) : (
         // <Others2 />
@@ -89,6 +90,7 @@ function App() {
             <Heading />
             <Slider slides={slideData} heading="Other Projects" />
           </SparklesBackground>
+          <ContactSection />
           {/* <Others4 /> */}
           {isMobile ? <FooterMobile /> : <Footer />}
         </>
