@@ -49,8 +49,14 @@ h2 {
   display: flex;
   position: absolute;
   top: calc(100% + 1rem);
-  width: 100vh;
-  margin-left: 170px;
+  justify-content: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .slider__controls {
+
+    top: 43vh;
+  }
 }
 .slider__controls .btn {
   --size: 3rem;
@@ -82,7 +88,10 @@ h2 {
 
 @media (max-width: 768px) {
   .slider {
-    --slide-size: 46vh;
+    --slide-size: 42vh;
+    overflow: hidden;
+    height: 50vh;
+
   }
 }
 
