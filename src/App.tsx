@@ -16,6 +16,7 @@ import Sidebar from "./components/IsroSidebar/Sidebar";
 import FooterMobile from "./components/FooterMobile";
 import { LatestNewsMobile } from "./components/NewsCards/LatestNewsMobile";
 import ParticleBackground from "./components/preloaderNew";
+// import Others from "./components/Others/others";
 
 const breakpointSidebar = 1200;
 const breakpointMobile = 780;
@@ -81,6 +82,7 @@ function App() {
           </SparklesBackground>
           {/* <h2 className="text-4xl text-center text-white">3D Models</h2> */}
           {/* <ThreeJsComp /> */}
+          {/* <Others /> */}
           {isMobile ? <FooterMobile /> : <Footer />}
         </>
       )}
