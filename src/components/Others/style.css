@@ -80,6 +80,12 @@ h2 {
   width: var(--slide-size);
 }
 
+@media (max-width: 768px) {
+  .slider {
+    --slide-size: 46vh;
+  }
+}
+
 .slider__wrapper {
   display: flex;
   margin: 0 calc(var(--slide-margin) * -1);
