@@ -15,7 +15,12 @@ import Model from "./components/modelsSection/model";
 import Sidebar from "./components/IsroSidebar/Sidebar";
 import FooterMobile from "./components/FooterMobile";
 import { LatestNewsMobile } from "./components/NewsCards/LatestNewsMobile";
-import ParticleBackground from "./components/preloaderNew";
+// import ParticleBackground from "./components/preloaderNew";
+import { Slider } from "./components/Others/others3";
+import Heading from "./components/Others/heading";
+import { slideData } from "./utils/data";
+import Launch from "./components/Launch";
+// import Others4 from "./components/Others/others4";
 
 const breakpointSidebar = 1200;
 const breakpointMobile = 780;
@@ -46,19 +51,22 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    // setIsLoading(false);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   // setIsLoading(false);
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 5000);
+  // }, []);
   return (
     <>
       {isLoading ? (
         <SparklesBackground>
-          <ParticleBackground/>
+          {/* <ParticleBackground /> */}
+          <Launch setIsLoading={setIsLoading}/>
         </SparklesBackground>
       ) : (
+        // <Others2 />
+
         <>
           <div id="bg-video-wrapper" className=" -z-10 h-screen object-cover">
             <BGVideo />
@@ -78,9 +86,10 @@ function App() {
             </div>
             {isMobile ? <LatestNewsMobile /> : <LatestNews />}
             <Model />
+            <Heading />
+            <Slider slides={slideData} heading="Other Projects" />
           </SparklesBackground>
-          {/* <h2 className="text-4xl text-center text-white">3D Models</h2> */}
-          {/* <ThreeJsComp /> */}
+          {/* <Others4 /> */}
           {isMobile ? <FooterMobile /> : <Footer />}
         </>
       )}
