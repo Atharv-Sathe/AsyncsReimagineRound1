@@ -15,10 +15,11 @@ import Model from "./components/modelsSection/model";
 import Sidebar from "./components/IsroSidebar/Sidebar";
 import FooterMobile from "./components/FooterMobile";
 import { LatestNewsMobile } from "./components/NewsCards/LatestNewsMobile";
-import ParticleBackground from "./components/preloaderNew";
+// import ParticleBackground from "./components/preloaderNew";
 import { Slider } from "./components/Others/others3";
 import Heading from "./components/Others/heading";
 import { slideData } from "./utils/data";
+import Launch from "./components/Launch";
 // import Others4 from "./components/Others/others4";
 
 const breakpointSidebar = 1200;
@@ -50,17 +51,18 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    // setIsLoading(false);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   // setIsLoading(false);
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 5000);
+  // }, []);
   return (
     <>
       {isLoading ? (
         <SparklesBackground>
-          <ParticleBackground />
+          {/* <ParticleBackground /> */}
+          <Launch setIsLoading={setIsLoading}/>
         </SparklesBackground>
       ) : (
         // <Others2 />

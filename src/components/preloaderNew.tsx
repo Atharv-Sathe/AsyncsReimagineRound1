@@ -1,13 +1,14 @@
-import { useRef, useEffect } from 'react';
-import * as THREE from 'three';
-import gsap from 'gsap';
+import { useRef, useEffect } from "react";
+import * as THREE from "three";
+import gsap from "gsap";
 
 interface ParticleBackgroundProps {
   color?: number;
   size?: number;
   distance?: number;
   particleCount?: number;
-  imageSrc?: string; 
+  imageSrc?: string;
+  setIsLoading: (value: boolean) => void;
 }
 
 const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
@@ -15,6 +16,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
   size = 2,
   distance = 200,
   particleCount = 1600,
+  setIsLoading,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -43,19 +45,19 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
       positions[i * 3 + 2] = z;
     }
     geometry.setAttribute(
-      'position',
+      "position",
       new THREE.BufferAttribute(positions, 3) // 3 components (x, y, z)
     );
 
     const createCircleTexture = () => {
       const size = 64;
-      const canvas = document.createElement('canvas');
+      const canvas = document.createElement("canvas");
       canvas.width = size;
       canvas.height = size;
-      const context = canvas.getContext('2d')!;
+      const context = canvas.getContext("2d")!;
       context.beginPath();
       context.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-      context.fillStyle = 'white';
+      context.fillStyle = "white";
       context.fill();
       return new THREE.CanvasTexture(canvas);
     };
@@ -98,17 +100,17 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
       });
     };
 
-    window.addEventListener('mousemove', onMouseMove, false);
+    window.addEventListener("mousemove", onMouseMove, false);
     animate();
 
     const animProps = { scale: 1, xRot: 0, yRot: 0, size: 2 };
     gsap.to(animProps, {
       duration: 10,
       scale: 1.3,
-     
+
       repeat: -1,
       yoyo: true,
-      ease: 'sine',
+      ease: "sine",
       onUpdate: () => {
         renderingParent.scale.set(
           animProps.scale,
@@ -124,7 +126,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
       yRot: Math.PI * 4,
       repeat: -1,
       yoyo: true,
-      ease: 'none',
+      ease: "none",
       onUpdate: () => {
         renderingParent.rotation.set(animProps.xRot, animProps.yRot, 0);
       },
@@ -135,7 +137,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
       size: 5,
       repeat: -1,
       yoyo: true,
-      ease: 'sine',
+      ease: "sine",
     });
 
     gsap.to(material, {
@@ -143,24 +145,29 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
       opacity: 1,
       repeat: -1,
       yoyo: true,
-      ease: 'sine',
+      ease: "sine",
     });
 
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener("mousemove", onMouseMove);
     };
   }, [color, size, distance, particleCount]);
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-         <img
+      <audio
+        autoPlay
+        src="/Isro_Video_01.mp3"
+        onEnded={() => setIsLoading(false)}
+      />
+      <img
         src="./india2.svg" // Update this path to your Indian flag image
         alt="Indian Flag"
         className="absolute inset-0 w-full h-full object-cover opacity-10 filter-none"
       />
       <div className="flex flex-col items-center justify-center">
         <canvas ref={canvasRef} />
-        <div className='absolute'>
+        <div className="absolute">
           <img
             src="./ISRO_Logo.svg"
             alt="image"
